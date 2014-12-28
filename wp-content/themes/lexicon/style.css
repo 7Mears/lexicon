@@ -117,7 +117,7 @@ html {
   box-sizing: inherit; }
 
 body {
-  background: #fff;
+  background: #F2F3F8;
   /* Fallback for when there is no custom background color defined. */ }
 
 article,
@@ -169,7 +169,7 @@ button,
 input,
 select,
 textarea {
-  color: #404040;
+  color: #263238;
   font-family: "Merriweather", serif;
   font-size: 16px;
   font-size: 1.6rem;
@@ -241,7 +241,7 @@ big {
 3.0 Elements
 --------------------------------------------------------------*/
 hr {
-  background-color: #ccc;
+  background-color: #384248;
   border: 0;
   height: 1px;
   margin-bottom: 1.5em; }
@@ -287,18 +287,19 @@ th {
   font-family: "Lato", sans-serif;
   font-size: 10px;
   text-transform: uppercase;
+  text-decoration: none;
   padding: 5px 25px;
   border-radius: 15px; }
 
 .button {
-  border: 1px solid #ccc; }
+  border: 1px solid #263238; }
   .button:hover {
-    border: 1px solid #ccc; }
+    border: 1px solid #6987C9; }
 
 .button-alt {
-  border: 1px solid #ccc; }
+  border: 1px solid #F2F3F8; }
   .button-alt:hover {
-    border: 1px solid #ccc; }
+    border: 1px solid #6987C9; }
 
 .more-link {
   text-decoration: underline;
@@ -330,7 +331,7 @@ input[type="submit"] {
   border: 1px solid;
   border-color: #ccc #ccc #bbb;
   border-radius: 3px;
-  background: #e6e6e6;
+  background: #384248;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
   color: rgba(0, 0, 0, 0.8);
   cursor: pointer;
@@ -421,11 +422,11 @@ textarea {
 5.1 Links
 --------------------------------------------------------------*/
 a {
-  color: royalblue; }
+  color: #6987C9; }
   a:visited {
-    color: purple; }
+    color: #6987C9; }
   a:hover, a:focus, a:active {
-    color: midnightblue; }
+    color: #70B7BA; }
 
 /*--------------------------------------------------------------
 5.2 Menus
@@ -715,7 +716,7 @@ object {
 --------------------------------------------------------------*/
 .site-content,
 .site-header,
-.site-footer {
+.site-info {
   content: "";
   display: table;
   max-width: 68em;
@@ -770,7 +771,7 @@ object {
 .home-post--title,
 .home-post--info,
 .home-post--content {
-  border-top: 1px solid #999;
+  border-top: 1px solid #384248;
   padding: 25px 0 4.2358em 0; }
 
 /*--------------------------------------------------------------
@@ -779,6 +780,10 @@ object {
 /*--------------------------------------------------------------
 13.4 Footer
 --------------------------------------------------------------*/
+.site-footer {
+  background: #263238;
+  color: #F2F3F8; }
+
 .footer-content {
   float: left;
   display: block;
@@ -791,7 +796,8 @@ object {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 23.23176%; }
+  width: 23.23176%;
+  font-family: "Lato", sans-serif; }
   .footer-widget .widget-title:last-child {
     margin-right: 0; }
 .footer-widget .widget-content {
@@ -811,7 +817,7 @@ object {
 .footer-widget .widget-title,
 .footer-widget .widget-content,
 .footer-widget .widget-content--split {
-  border-top: 1px solid #999;
+  border-top: 1px solid #384248;
   padding: 25px 0 4.2358em 0; }
 
 /*# sourceMappingURL=style.css.map */

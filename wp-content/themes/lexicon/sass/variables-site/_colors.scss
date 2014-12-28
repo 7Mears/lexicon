@@ -1,17 +1,28 @@
-$color__background-body: #fff;
+$white: #F2F3F8;
+$off-white: #FDFFF7;
+$grey: #687074;
+$yellow: #FFF0A5;
+$blue: #6987C9;
+$black: #263238;
+$lightBlack: #384248;
+$teal: #70B7BA;
+
+$color__background-body: $white;
+$color__background-body-alt: $black;
 $color__background-screen: #f1f1f1;
-$color__background-hr: #ccc;
-$color__background-button: #e6e6e6;
+$color__background-hr: $lightBlack;
+$color__background-button: $lightBlack;
 $color__background-pre: #eee;
 $color__background-ins: #fff9c0;
 
 $color__text-screen: #21759b;
 $color__text-input: #666;
 $color__text-input-focus: #111;
-$color__link: royalblue;
-$color__link-visited: purple;
-$color__link-hover: midnightblue;
-$color__text-main: #404040;
+$color__link: $blue;
+$color__link-visited: $blue;
+$color__link-hover: $teal;
+$color__text-main: $black;
+$color__text-alt: $white;
 
 $color__border-button: #ccc #ccc #bbb;
 $color__border-button-hover: #ccc #bbb #aaa;
@@ -19,9 +30,9 @@ $color__border-button-focus: #aaa #bbb #bbb;
 $color__border-input: #ccc;
 $color__border-abbr: #666;
 
-$bar: #999;
+$bar: $lightBlack;
 
-$color__button: #ccc;
-$color__button-alt: #ccc;
-$color__button--hover: #ccc;
-$color__button-alt--hover: #ccc;
+$color__button: $black;
+$color__button-alt: $white;
+$color__button--hover: $blue;
+$color__button-alt--hover: $blue;

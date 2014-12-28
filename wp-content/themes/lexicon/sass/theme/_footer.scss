@@ -1,3 +1,8 @@
+.site-footer {
+  background: $color__background-body-alt;
+  color: $color__text-alt;
+
+}
 .footer-content {
   @include span-columns(12);
 }
@@ -6,6 +11,7 @@
 
   .widget-title {
     @include span-columns(3 of 12);
+    font-family: $font__alt;
   }
 
   .widget-content {

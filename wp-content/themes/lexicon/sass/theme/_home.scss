@@ -1,0 +1,40 @@
+// Home Top
+.home-top {
+  padding: $column;
+  text-align: center;
+}
+
+// Home Middle
+.home-middle {
+  text-align: center;
+  padding: $column;
+}
+
+// Home Bottom
+.home-bottom {
+  @include span-columns(12);
+}
+
+.home-post--title {
+  @include span-columns(3 of 12);
+}
+
+.home-post--info {
+  @include span-columns(3 of 12);
+
+  span {
+    font-style: italic;
+  }
+
+}
+
+.home-post--content {
+  @include span-columns(6 of 12);
+}
+
+.home-post--title,
+.home-post--info,
+.home-post--content {
+  border-top: 1px solid $bar;
+  padding: $pad 0 $column 0;
+}

@@ -39,7 +39,7 @@ get_header(); ?>
               <p>Category<br /><span><?php the_category( ', ' ); ?></span></p>
             </div>
 
-            <div id="post-content">
+            <div class="home-post--content">
               <?php the_excerpt(); ?>
             </div>
           </div><!-- #home-post -->

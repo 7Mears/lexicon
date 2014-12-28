@@ -725,6 +725,54 @@ object {
 /*--------------------------------------------------------------
 13.2 Homepage
 --------------------------------------------------------------*/
+.home-top {
+  padding: 4.2358em;
+  text-align: center; }
+
+.home-middle {
+  text-align: center;
+  padding: 4.2358em; }
+
+.home-bottom {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%; }
+  .home-bottom:last-child {
+    margin-right: 0; }
+
+.home-post--title {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%; }
+  .home-post--title:last-child {
+    margin-right: 0; }
+
+.home-post--info {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%; }
+  .home-post--info:last-child {
+    margin-right: 0; }
+  .home-post--info span {
+    font-style: italic; }
+
+.home-post--content {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%; }
+  .home-post--content:last-child {
+    margin-right: 0; }
+
+.home-post--title,
+.home-post--info,
+.home-post--content {
+  border-top: 1px solid #999;
+  padding: 25px 0 4.2358em 0; }
+
 /*--------------------------------------------------------------
 13.3 Single Page
 --------------------------------------------------------------*/

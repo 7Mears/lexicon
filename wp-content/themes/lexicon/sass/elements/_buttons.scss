@@ -1,0 +1,38 @@
+.button,
+.button-alt {
+  font-family: $font__alt;
+  font-size: 10px;
+  text-transform: uppercase;
+  padding: 5px 25px;
+  border-radius: $rad;
+}
+
+.button {
+  border: 1px solid $color__button;
+
+  &:hover {
+    border: 1px solid $color__button--hover;
+  }
+}
+
+.button-alt {
+  border: 1px solid $color__button-alt;
+
+  &:hover {
+    border: 1px solid $color__button-alt--hover;
+  }
+}
+
+.more-link {
+  text-decoration: underline;
+  font-style: italic;
+}
+
+// Footer button
+.widget-content {
+  .button-alt {
+    display: block;
+    float: left;
+    clear: left;
+  }
+}

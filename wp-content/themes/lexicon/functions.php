@@ -180,3 +180,14 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+
+/**
+* Adds a Read more link to excerpts
+*/
+
+function new_excerpt_more($more) {
+	return ' ... ' . '<a href="'. get_permalink($post->ID) . '" class="more-link">Read more</a>';
+}
+
+add_filter('excerpt_more', 'new_excerpt_more');

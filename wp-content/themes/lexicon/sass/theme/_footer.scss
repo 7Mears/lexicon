@@ -1,0 +1,25 @@
+.footer-content {
+  @include span-columns(12);
+}
+
+.footer-widget {
+
+  .widget-title {
+    @include span-columns(3 of 12);
+  }
+
+  .widget-content {
+    @include span-columns(9 of 12);
+  }
+
+  .widget-content--split {
+    @include span-columns(4.5 of 12);
+  }
+
+  .widget-title,
+  .widget-content,
+  .widget-content--split {
+    border-top: 1px solid $bar;
+    padding: $pad 0 $column 0;
+  }
+}

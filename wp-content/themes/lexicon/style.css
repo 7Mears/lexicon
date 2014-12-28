@@ -282,6 +282,33 @@ table {
 th {
   font-weight: bold; }
 
+.button,
+.button-alt {
+  font-family: "Lato", sans-serif;
+  font-size: 10px;
+  text-transform: uppercase;
+  padding: 5px 25px;
+  border-radius: 15px; }
+
+.button {
+  border: 1px solid #ccc; }
+  .button:hover {
+    border: 1px solid #ccc; }
+
+.button-alt {
+  border: 1px solid #ccc; }
+  .button-alt:hover {
+    border: 1px solid #ccc; }
+
+.more-link {
+  text-decoration: underline;
+  font-style: italic; }
+
+.widget-content .button-alt {
+  display: block;
+  float: left;
+  clear: left; }
+
 /*--------------------------------------------------------------
 4.0 Forms
 --------------------------------------------------------------*/
@@ -704,5 +731,39 @@ object {
 /*--------------------------------------------------------------
 13.4 Footer
 --------------------------------------------------------------*/
+.footer-content {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%; }
+  .footer-content:last-child {
+    margin-right: 0; }
+
+.footer-widget .widget-title {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%; }
+  .footer-widget .widget-title:last-child {
+    margin-right: 0; }
+.footer-widget .widget-content {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 74.41059%; }
+  .footer-widget .widget-content:last-child {
+    margin-right: 0; }
+.footer-widget .widget-content--split {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 36.02647%; }
+  .footer-widget .widget-content--split:last-child {
+    margin-right: 0; }
+.footer-widget .widget-title,
+.footer-widget .widget-content,
+.footer-widget .widget-content--split {
+  border-top: 1px solid #999;
+  padding: 25px 0 4.2358em 0; }
 
 /*# sourceMappingURL=style.css.map */

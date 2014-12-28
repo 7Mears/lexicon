@@ -1,0 +1,5 @@
+.site-content,
+.site-header,
+.site-footer {
+  @include outer-container;
+}

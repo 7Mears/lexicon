@@ -1,0 +1,25 @@
+.single-content {
+  @include span-columns(12);
+
+  .site-main {
+    @include span-columns(8 of 12);
+    @include shift(2);
+  }
+
+  .entry-title,
+  .entry-meta {
+    text-align: center;
+  }
+
+  .alignleft {
+    @include shift(-3);
+    float: left;
+    padding-right: $pad;
+  }
+
+  .alignright {
+    margin-right: -25.58941%;
+    float: right;
+    padding-left: $pad;
+  }
+}

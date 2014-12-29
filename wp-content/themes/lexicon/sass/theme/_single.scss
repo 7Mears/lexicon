@@ -2,8 +2,8 @@
   @include span-columns(12);
 
   .site-main {
-    @include span-columns(8 of 12);
-    @include shift(2);
+    @include span-columns(7 of 12);
+    @include shift(2.5);
   }
 
   .entry-title,
@@ -12,13 +12,13 @@
   }
 
   .alignleft {
-    @include shift(-3);
+    @include shift(-4.36);
     float: left;
     padding-right: $pad;
   }
 
   .alignright {
-    margin-right: -25.58941%;
+    margin-right: -37.18995%;
     float: right;
     padding-left: $pad;
   }

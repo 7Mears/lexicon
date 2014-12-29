@@ -745,12 +745,6 @@ object {
   text-align: center;
   padding: 4.2358em; }
 
-.home-post--title,
-.home-post--info,
-.home-post--content {
-  border-top: 1px solid #a9aaad;
-  padding: 25px 0 4.2358em 0; }
-
 .home-middle {
   float: left;
   display: block;
@@ -766,6 +760,14 @@ object {
   width: 31.76157%; }
   .home-post--title:last-child {
     margin-right: 0; }
+  @media only screen and (max-width: 45em) {
+    .home-post--title {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 74.41059%; }
+      .home-post--title:last-child {
+        margin-right: 0; } }
   .home-post--title h4 {
     font-size: 22px;
     font-size: 2.2rem; }
@@ -779,6 +781,15 @@ object {
   font-size: 1.2rem; }
   .home-post--info:last-child {
     margin-right: 0; }
+  @media only screen and (max-width: 45em) {
+    .home-post--info {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 23.23176%;
+      margin-right: 0; }
+      .home-post--info:last-child {
+        margin-right: 0; } }
   .home-post--info span {
     font-style: italic; }
 
@@ -789,6 +800,41 @@ object {
   width: 48.82117%; }
   .home-post--content:last-child {
     margin-right: 0; }
+  @media only screen and (max-width: 45em) {
+    .home-post--content {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%; }
+      .home-post--content:last-child {
+        margin-right: 0; } }
+
+.home-post--title,
+.home-post--info,
+.home-post--content {
+  border-top: 1px solid #a9aaad;
+  padding: 25px 0 4.2358em 0; }
+  @media only screen and (max-width: 30em) {
+    .home-post--title,
+    .home-post--info,
+    .home-post--content {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%;
+      padding: 25px 0; }
+      .home-post--title:last-child,
+      .home-post--info:last-child,
+      .home-post--content:last-child {
+        margin-right: 0; } }
+
+@media only screen and (max-width: 30em) {
+  .home-post--info {
+    border: 0; } }
+
+@media only screen and (max-width: 45em) {
+  .home-post--content {
+    border: 0; } }
 
 .home-bottom {
   text-align: center;

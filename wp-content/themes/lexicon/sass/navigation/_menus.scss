@@ -46,8 +46,10 @@
 	li {
 		float: left;
 		position: relative;
+		padding: 0 $pad;
 
 		&:hover > a {
+			text-decoration: underline;
 		}
 	}
 	a {

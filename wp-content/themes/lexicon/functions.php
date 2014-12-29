@@ -99,19 +99,19 @@ function lexicon_widgets_init() {
 	register_sidebar( array(
 		'name'          => __( 'Home Top', 'wordsmith' ),
 		'id'            => 'hometop',
-		'description'   => 'This section is displayed at the top of the front page.',
+		'description'   => 'This section is displayed at the top of the home page.',
 		'before_widget' => '<div class="home-top widget %2$s">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h5>',
 		'after_title'   => '</h5>',
 		) );
 
-	//Home Middle
+	//Home Bottom
 	register_sidebar( array(
-		'name'          => __( 'Home Middle', 'wordsmith' ),
-		'id'            => 'homemiddle',
-		'description'   => 'This section is displayed at the middle of the front page.',
-		'before_widget' => '<div class="home-middle widget %2$s">',
+		'name'          => __( 'Home Bottom', 'wordsmith' ),
+		'id'            => 'homebottom',
+		'description'   => 'This section is displayed at the bottom of the home page.',
+		'before_widget' => '<div class="home-bottom widget %2$s">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h5>',
 		'after_title'   => '</h5>',

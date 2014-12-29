@@ -1,17 +1,24 @@
-// Home Top
-.home-top {
+// Site Description
+.site-description {
   padding: $column;
   text-align: center;
+}
+
+// Home Top
+.home-top {
+  text-align: center;
+  padding: $column;
 }
 
 // Home Middle
-.home-middle {
-  text-align: center;
-  padding: $column;
+.home-post--title,
+.home-post--info,
+.home-post--content {
+  border-top: 1px solid $color__border;
+  padding: $pad 0 $column 0;
 }
 
-// Home Bottom
-.home-bottom {
+.home-middle {
   @include span-columns(12);
 }
 
@@ -37,9 +44,8 @@
   @include span-columns(6 of 12);
 }
 
-.home-post--title,
-.home-post--info,
-.home-post--content {
-  border-top: 1px solid $bar;
-  padding: $pad 0 $column 0;
+// Home Bottom
+.home-bottom {
+  text-align: center;
+  padding: $column;
 }

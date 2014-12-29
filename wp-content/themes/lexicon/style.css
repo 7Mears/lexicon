@@ -293,16 +293,16 @@ th {
   font-size: 1.1rem;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 5px 25px;
+  padding: 8px 25px;
   border-radius: 5px; }
 
 .button {
-  border: 1px solid #263238; }
+  border: 1px solid #70B7BA; }
   .button:hover {
     border: 1px solid #6987C9; }
 
 .button-alt {
-  border: 1px solid #F2F3F8; }
+  border: 1px solid #70B7BA; }
   .button-alt:hover {
     border: 1px solid #6987C9; }
 
@@ -463,7 +463,10 @@ a {
       left: auto; }
   .main-navigation li {
     float: left;
-    position: relative; }
+    position: relative;
+    padding: 0 25px; }
+    .main-navigation li:hover > a {
+      text-decoration: underline; }
   .main-navigation a {
     display: block;
     text-decoration: none; }
@@ -728,23 +731,32 @@ object {
   margin-left: auto;
   margin-right: auto; }
 
+.site-title {
+  text-align: center; }
+
 /*--------------------------------------------------------------
 13.2 Homepage
 --------------------------------------------------------------*/
-.home-top {
+.site-description {
   padding: 4.2358em;
   text-align: center; }
 
-.home-middle {
+.home-top {
   text-align: center;
   padding: 4.2358em; }
 
-.home-bottom {
+.home-post--title,
+.home-post--info,
+.home-post--content {
+  border-top: 1px solid #a9aaad;
+  padding: 25px 0 4.2358em 0; }
+
+.home-middle {
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 100%; }
-  .home-bottom:last-child {
+  .home-middle:last-child {
     margin-right: 0; }
 
 .home-post--title {
@@ -778,11 +790,9 @@ object {
   .home-post--content:last-child {
     margin-right: 0; }
 
-.home-post--title,
-.home-post--info,
-.home-post--content {
-  border-top: 1px solid #384248;
-  padding: 25px 0 4.2358em 0; }
+.home-bottom {
+  text-align: center;
+  padding: 4.2358em; }
 
 /*--------------------------------------------------------------
 13.3 Single Page

@@ -11,25 +11,23 @@ get_header(); ?>
 <div id="primary" class="content-area">
   <main id="main" class="site-main" role="main">
 
-    <?php if ( is_active_sidebar( 'homeTop' ) ) : ?>
-      <section id="home-top" class="alt-colors">
+      <section id="home-site-description" class="home-site-description">
+          <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+      </section>
+    <!-- #site-description -->
+
+    <?php if ( is_active_sidebar( 'hometop' ) ) : ?>
+      <section id="home-top">
         <?php dynamic_sidebar( 'hometop' ); ?>
       </section>
     <?php endif; ?>
     <!-- #home-top -->
 
-    <?php if ( is_active_sidebar( 'homeMiddle' ) ) : ?>
-      <section id="home-middle">
-        <?php dynamic_sidebar( 'homemiddle' ); ?>
-      </section>
-    <?php endif; ?>
-    <!-- #home-middle -->
-
     <?php $posts = get_posts( "numberposts=3" ); ?>
     <?php if( $posts ) : ?>
-      <section id="home-bottom">
+      <section id="home-middle">
         <?php foreach( $posts as $post ) : setup_postdata( $post ); ?>
-          <div class="home-bottom home-post">
+          <div class="home-middle home-post">
             <div class="home-post--title">
               <h4><a href="<?php echo get_permalink($post->ID); ?>" ><?php echo $post->post_title; ?></a></h4>
             </div>
@@ -45,6 +43,13 @@ get_header(); ?>
           </div><!-- #home-post -->
 
         <?php endforeach; ?>
+      </section>
+    <?php endif; ?>
+    <!-- #home-middle -->
+
+    <?php if ( is_active_sidebar( 'homebottom' ) ) : ?>
+      <section id="home-bottom">
+        <?php dynamic_sidebar( 'homebottom' ); ?>
       </section>
     <?php endif; ?>
     <!-- #home-bottom -->

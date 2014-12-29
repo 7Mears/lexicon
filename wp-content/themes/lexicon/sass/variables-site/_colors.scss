@@ -1,6 +1,6 @@
 $white: #F2F3F8;
 $off-white: #FDFFF7;
-$grey: #687074;
+$grey: #a9aaad;
 $yellow: #FFF0A5;
 $blue: #6987C9;
 $black: #263238;
@@ -29,10 +29,10 @@ $color__border-button-hover: #ccc #bbb #aaa;
 $color__border-button-focus: #aaa #bbb #bbb;
 $color__border-input: #ccc;
 $color__border-abbr: #666;
+$color__border: $grey;
+$color__border-alt: $lightBlack;
 
-$bar: $lightBlack;
-
-$color__button: $black;
-$color__button-alt: $white;
+$color__button: $teal;
+$color__button-alt: $teal;
 $color__button--hover: $blue;
 $color__button-alt--hover: $blue;

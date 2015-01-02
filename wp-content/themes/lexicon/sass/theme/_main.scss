@@ -1,9 +1,12 @@
 .site-content,
-.site-header,
 .site-info {
   @include outer-container;
 }
 
 .site-title {
   text-align: center;
+}
+
+.home-header--image {
+  background-size: cover !important;
 }

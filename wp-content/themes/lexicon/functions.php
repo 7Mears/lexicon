@@ -70,13 +70,70 @@ function lexicon_setup() {
 	) );
 
 	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'lexicon_custom_background_args', array(
-		'default-color' => 'ffffff',
-		'default-image' => '',
-	) ) );
+	// add_theme_support( 'custom-background', apply_filters( 'lexicon_custom_background_args', array(
+	// 	'default-color' => 'ffffff',
+	// 	'default-image' => '',
+	// ) ) );
+
+	// Add theme support for Custom Header
+	$header_args = array(
+		'default-image'          => '',
+		'width'                  => 1600,
+		'height'                 => 800,
+		'flex-width'             => true,
+		'flex-height'            => true,
+		'uploads'                => true,
+		'random-default'         => true,
+		'header-text'            => false,
+		'default-text-color'     => '',
+		'wp-head-callback'       => '',
+		'admin-head-callback'    => '',
+		'admin-preview-callback' => '',
+	);
+	add_theme_support( 'custom-header', $header_args );
+
 }
 endif; // lexicon_setup
 add_action( 'after_setup_theme', 'lexicon_setup' );
+
+
+/**
+* Custom theme colors
+*
+*/
+function lexicon_customizer( $wp_customize ) {
+	// add new section
+	$wp_customize->add_section( 'lexicon_theme_colors', array(
+		'title' => __( 'Theme Colors', 'lexicon' ),
+		'priority' => 100,
+		) );
+
+		// add color picker setting
+		$wp_customize->add_setting( 'link_color', array(
+			'default' => '#ff0000'
+		) );
+
+		// add color picker control
+		$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'link_color', array(
+			'label' => 'Link Color',
+			'section' => 'lexicon_theme_colors',
+			'settings' => 'link_color',
+		) ) );
+}
+add_action( 'customize_register', 'lexicon_customizer' );
+
+function lexicon_customizer_head_styles() {
+	$link_color = get_theme_mod( 'link_color' );
+
+	if ( $link_color != '#ff0000' ) :
+		?>
+		<style type="text/css">
+		a { color: <?php echo $link_color; ?>; }
+		</style>
+		<?php
+	endif;
+}
+add_action( 'wp_head', 'lexicon_customizer_head_styles' );
 
 /**
  * Register widget area.

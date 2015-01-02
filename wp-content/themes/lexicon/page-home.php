@@ -8,20 +8,21 @@
 
 get_header(); ?>
 
-<div id="primary" class="content-area">
   <main id="main" class="site-main" role="main">
-
       <section id="home-site-description" class="home-site-description">
-          <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+          <h2 class="site-description"><span class="text-bg"><?php bloginfo( 'description' ); ?></span></h2>
       </section>
     <!-- #site-description -->
-
     <?php if ( is_active_sidebar( 'hometop' ) ) : ?>
       <section id="home-top">
         <?php dynamic_sidebar( 'hometop' ); ?>
       </section>
     <?php endif; ?>
     <!-- #home-top -->
+
+  </div><!-- #site-content -->
+</div><!-- #header-image -->
+  <div class="site-content">
 
     <?php $posts = get_posts( "numberposts=3" ); ?>
     <?php if( $posts ) : ?>
@@ -55,6 +56,6 @@ get_header(); ?>
     <!-- #home-bottom -->
 
   </main><!-- #main -->
-</div><!-- #primary -->
+
 
 <?php get_footer(); ?>

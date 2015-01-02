@@ -436,17 +436,25 @@ a {
 /*--------------------------------------------------------------
 5.2 Menus
 --------------------------------------------------------------*/
+.outer-center {
+  float: right;
+  right: 50%;
+  position: relative; }
+
+.inner-center {
+  float: right;
+  right: -50%;
+  position: relative; }
+
 .main-navigation {
-  clear: both;
-  display: block;
-  float: left;
-  width: 100%; }
+  padding: 5px 0; }
   .main-navigation ul {
     list-style: none;
     margin: 0;
     padding-left: 0; }
     .main-navigation ul ul {
       box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+      padding: 10px;
       float: left;
       position: absolute;
       top: 1.5em;
@@ -455,8 +463,10 @@ a {
       .main-navigation ul ul ul {
         left: -999em;
         top: 0; }
-      .main-navigation ul ul li:hover > ul {
-        left: 100%; }
+      .main-navigation ul ul li {
+        padding: 10px 0; }
+        .main-navigation ul ul li:hover > ul {
+          left: 100%; }
       .main-navigation ul ul a {
         width: 200px; }
     .main-navigation ul li:hover > ul {
@@ -723,7 +733,6 @@ object {
 13.1 Main
 --------------------------------------------------------------*/
 .site-content,
-.site-header,
 .site-info {
   content: "";
   display: table;
@@ -734,8 +743,11 @@ object {
 .site-title {
   text-align: center; }
 
+.home-header--image {
+  background-size: cover !important; }
+
 /*--------------------------------------------------------------
-13.2 Homepage
+13.2 Header
 --------------------------------------------------------------*/
 .site-description {
   padding: 4.2358em;
@@ -745,6 +757,9 @@ object {
   text-align: center;
   padding: 4.2358em; }
 
+/*--------------------------------------------------------------
+13.3 Homepage
+--------------------------------------------------------------*/
 .home-middle {
   float: left;
   display: block;
@@ -841,7 +856,7 @@ object {
   padding: 4.2358em; }
 
 /*--------------------------------------------------------------
-13.3 Single Page
+13.4 Single Page
 --------------------------------------------------------------*/
 .single-content {
   float: left;
@@ -871,12 +886,8 @@ object {
     padding-left: 25px; }
 
 /*--------------------------------------------------------------
-13.4 Footer
+13.5 Footer
 --------------------------------------------------------------*/
-.site-footer {
-  background: #263238;
-  color: #F2F3F8; }
-
 .footer-content {
   float: left;
   display: block;
@@ -914,5 +925,17 @@ object {
 .footer-widget .widget-content--split {
   border-top: 1px solid #384248;
   padding: 25px 0 4.2358em 0; }
+
+/*--------------------------------------------------------------
+13.6 Colors
+--------------------------------------------------------------*/
+.site-color-alt,
+.main-navigation ul ul {
+  background: #263238;
+  color: #F2F3F8; }
+
+.text-bg {
+  background: rgba(38, 50, 56, 0.7);
+  color: #F2F3F8; }
 
 /*# sourceMappingURL=style.css.map */

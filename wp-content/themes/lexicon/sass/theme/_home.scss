@@ -1,15 +1,3 @@
-// Site Description
-.site-description {
-  padding: $column;
-  text-align: center;
-}
-
-// Home Top
-.home-top {
-  text-align: center;
-  padding: $column;
-}
-
 // Home Middle
 .home-middle { @include span-columns(12); }
 

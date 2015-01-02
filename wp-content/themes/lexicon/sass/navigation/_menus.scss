@@ -1,8 +1,17 @@
+.outer-center {
+	float: right;
+	right: 50%;
+	position: relative;
+}
+
+.inner-center {
+	float: right;
+	right: -50%;
+	position: relative;
+}
+
 .main-navigation {
-	clear: both;
-	display: block;
-	float: left;
-	width: 100%;
+	padding: 5px 0;
 
 	ul {
 		list-style: none;
@@ -11,6 +20,7 @@
 
 		ul {
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+			padding: 10px;
 			float: left;
 			position: absolute;
 			top: 1.5em;
@@ -23,6 +33,8 @@
 			}
 
 			li {
+				padding: 10px 0;
+
 				&:hover > ul {
 					left: 100%;
 				}

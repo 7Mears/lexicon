@@ -163,12 +163,23 @@ function lexicon_widgets_init() {
 		'after_title'   => '</h5>',
 		) );
 
+	//Home Middle
+	register_sidebar( array(
+		'name'          => __( 'Home Middle *', 'wordsmith' ),
+		'id'            => 'homemiddle',
+		'description'   => 'This section is displayed at the middle of the home page.  You need a widget here in order to have featured blog posts.',
+		'before_widget' => '<div class="home-middle-widget widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h4>',
+		'after_title'   => '</h4>',
+		) );
+
 	//Home Bottom
 	register_sidebar( array(
 		'name'          => __( 'Home Bottom', 'wordsmith' ),
 		'id'            => 'homebottom',
 		'description'   => 'This section is displayed at the bottom of the home page.',
-		'before_widget' => '<div class="home-bottom widget %2$s">',
+		'before_widget' => '<div class="home-bottom %2$s">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h5>',
 		'after_title'   => '</h5>',

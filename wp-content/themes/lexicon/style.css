@@ -743,23 +743,25 @@ object {
 .site-title {
   text-align: center; }
 
-.home-header--image {
-  background-size: cover !important; }
-
 /*--------------------------------------------------------------
 13.2 Header
 --------------------------------------------------------------*/
 .site-description {
   padding: 4.2358em;
-  text-align: center; }
+  text-align: center;
+  margin: 0; }
 
 .home-top {
   text-align: center;
-  padding: 4.2358em; }
+  padding-bottom: 4.2358em; }
 
 /*--------------------------------------------------------------
 13.3 Homepage
 --------------------------------------------------------------*/
+.home-middle-widget {
+  text-align: center;
+  padding: 4.2358em; }
+
 .home-middle {
   float: left;
   display: block;
@@ -853,7 +855,14 @@ object {
 
 .home-bottom {
   text-align: center;
-  padding: 4.2358em; }
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  padding-top: 4.2358em;
+  padding-bottom: 8.4716em; }
+  .home-bottom:last-child {
+    margin-right: 0; }
 
 /*--------------------------------------------------------------
 13.4 Single Page

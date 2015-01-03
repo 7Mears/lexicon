@@ -1,4 +1,9 @@
 // Home Middle
+.home-middle-widget {
+  text-align: center;
+  padding: $column;
+}
+
 .home-middle { @include span-columns(12); }
 
 .home-post--title {
@@ -44,5 +49,7 @@
 // Home Bottom
 .home-bottom {
   text-align: center;
-  padding: $column;
+  @include span-columns(12);
+  padding-top: $column;
+  padding-bottom: ( $column * 2 );
 }

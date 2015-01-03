@@ -24,6 +24,9 @@ get_header(); ?>
 </div><!-- #header-image -->
   <div class="site-content">
 
+    <?php if ( is_active_sidebar( 'homemiddle' ) ) : ?>
+    <?php dynamic_sidebar( 'homemiddle' ); ?>
+
     <?php $posts = get_posts( "numberposts=3" ); ?>
     <?php if( $posts ) : ?>
       <section id="home-middle">
@@ -46,13 +49,19 @@ get_header(); ?>
         <?php endforeach; ?>
       </section>
     <?php endif; ?>
+
+  <?php endif; ?>
     <!-- #home-middle -->
 
+
     <?php if ( is_active_sidebar( 'homebottom' ) ) : ?>
+
       <section id="home-bottom">
         <?php dynamic_sidebar( 'homebottom' ); ?>
       </section>
+
     <?php endif; ?>
+
     <!-- #home-bottom -->
 
   </main><!-- #main -->

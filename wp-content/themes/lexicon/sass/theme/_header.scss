@@ -2,10 +2,11 @@
 .site-description {
   padding: $column;
   text-align: center;
+  margin: 0;
 }
 
 // Home Top
 .home-top {
   text-align: center;
-  padding: $column;
+  padding-bottom: $column;
 }

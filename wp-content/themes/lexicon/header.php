@@ -35,7 +35,13 @@
 
 <?php if(is_front_page() ) { ?>
 	<style>
-	.home-header--image { background: url('<?php header_image() ?>'); }
+	.home-header--image {
+		background: url('<?php header_image() ?>');
+		background-size: cover;
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+		background-position: center center;
+		}
 	</style>
 	<div class="home-header--image">
 <?php } ?><!-- #header image -->

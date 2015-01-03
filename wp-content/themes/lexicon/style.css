@@ -732,6 +732,11 @@ object {
 /*--------------------------------------------------------------
 13.1 Main
 --------------------------------------------------------------*/
+html,
+body {
+  height: 100%;
+  width: 100%; }
+
 .site-content,
 .site-info {
   content: "";
@@ -893,6 +898,30 @@ object {
     margin-right: -37.18995%;
     float: right;
     padding-left: 25px; }
+
+.single-content {
+  padding-top: 4.2358em;
+  margin-top: -16.9432em;
+  z-index: 99;
+  background: #F2F3F8;
+  position: relative;
+  border-radius: 5px 5px 0 0; }
+
+.single-post-header-wrap {
+  position: relative;
+  height: 100%;
+  width: 100%; }
+
+.single-post-header {
+  background-size: cover !important;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  padding: 8.4716em 0; }
+  .single-post-header h2,
+  .single-post-header p {
+    text-align: center;
+    display: block; }
 
 /*--------------------------------------------------------------
 13.5 Footer

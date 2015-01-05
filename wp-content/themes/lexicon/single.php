@@ -24,7 +24,16 @@ get_header(); ?>
 		<p><span class="text-bg">By <?php the_author() ?>, on <?php the_time('F jS, Y') ?> </span></p>
 	</div>
 </div>
+
 <?php else : ?>
+
+<div class="single-post-header-wrap">
+	<div class ="single-post-header site-color-alt">
+		<h2><span class="text-bg"><?php the_title(); ?></span></h2>
+		<p><span class="text-bg">By <?php the_author() ?>, on <?php the_time('F jS, Y') ?> </span></p>
+	</div>
+</div>
+
 <?php endif; ?>
 
 <div class="site">

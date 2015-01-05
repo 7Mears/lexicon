@@ -14,6 +14,17 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <?php wp_head(); ?>
+
+<?php if(is_front_page() ) { ?>
+	<style>
+	.home-header--image {
+		background: url('<?php header_image() ?>');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+	}
+	</style>
+<?php } ?><!-- #header image -->
 </head>
 
 <body <?php body_class(); ?>>
@@ -34,15 +45,6 @@
 	</header><!-- #masthead -->
 
 <?php if(is_front_page() ) { ?>
-	<style>
-	.home-header--image {
-		background: url('<?php header_image() ?>');
-		background-size: cover;
-		background-attachment: fixed;
-		background-repeat: no-repeat;
-		background-position: center center;
-		}
-	</style>
 	<div class="home-header--image">
 <?php } ?><!-- #header image -->
 

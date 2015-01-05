@@ -27,10 +27,13 @@ get_header(); ?>
     <?php if ( is_active_sidebar( 'homemiddle' ) ) : ?>
     <?php dynamic_sidebar( 'homemiddle' ); ?>
 
-    <?php $posts = get_posts( "numberposts=3" ); ?>
+    <?php $posts = get_posts( "numberposts=5" ); ?>
     <?php if( $posts ) : ?>
+      
       <section id="home-middle">
+
         <?php foreach( $posts as $post ) : setup_postdata( $post ); ?>
+
           <div class="home-middle home-post">
             <div class="home-post--title">
               <h4><a href="<?php echo get_permalink($post->ID); ?>" ><?php echo $post->post_title; ?></a></h4>
@@ -42,12 +45,16 @@ get_header(); ?>
             </div>
 
             <div class="home-post--content">
+
               <?php the_excerpt(); ?>
+
             </div>
           </div><!-- #home-post -->
 
         <?php endforeach; ?>
+
       </section>
+
     <?php endif; ?>
 
   <?php endif; ?>

@@ -31,7 +31,7 @@ and Blueprint http://www.blueprintcss.org/
 	5.1 Links
 	5.2 Menus
 6.0 Accessibility
-7.0 Alignments
+7.0 Alignments & Grids
 8.0 Clearings
 9.0 Widgets
 10.0 Content
@@ -542,7 +542,7 @@ a {
     /* Above WP toolbar */ }
 
 /*--------------------------------------------------------------
-7.0 Alignments
+7.0 Alignments & Grids
 --------------------------------------------------------------*/
 .alignleft {
   display: inline;
@@ -558,8 +558,96 @@ a {
   display: block;
   margin: 0 auto; }
 
-.text-center {
+.center {
   text-align: center; }
+
+.eb-grid {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%; }
+  .eb-grid:last-child {
+    margin-right: 0; }
+
+.eb-grid-onefourth-first {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%; }
+  .eb-grid-onefourth-first:last-child {
+    margin-right: 0; }
+
+.eb-grid-onefourth-second {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%; }
+  .eb-grid-onefourth-second:last-child {
+    margin-right: 0; }
+
+.eb-grid-onefourth-third {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%; }
+  .eb-grid-onefourth-third:last-child {
+    margin-right: 0; }
+
+.eb-grid-onefourth-fourth {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%; }
+  .eb-grid-onefourth-fourth:last-child {
+    margin-right: 0; }
+
+.eb-grid {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%; }
+  .eb-grid:last-child {
+    margin-right: 0; }
+
+.eb-grid-onethird-first {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%; }
+  .eb-grid-onethird-first:last-child {
+    margin-right: 0; }
+
+.eb-grid-onethird-second {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%; }
+  .eb-grid-onethird-second:last-child {
+    margin-right: 0; }
+
+.eb-grid-onethird-third {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%; }
+  .eb-grid-onethird-third:last-child {
+    margin-right: 0; }
+
+.eb-grid-onehalf-first {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%; }
+  .eb-grid-onehalf-first:last-child {
+    margin-right: 0; }
+
+.eb-grid-onehalf-second {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%; }
+  .eb-grid-onehalf-second:last-child {
+    margin-right: 0; }
 
 /*--------------------------------------------------------------
 8.0 Clearings

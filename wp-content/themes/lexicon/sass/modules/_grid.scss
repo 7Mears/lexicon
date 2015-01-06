@@ -1,0 +1,46 @@
+// grid 4
+.eb-grid {
+  @include span-columns(12);
+}
+
+.eb-grid-onefourth-first {
+  @include span-columns(3 of 12);
+}
+
+.eb-grid-onefourth-second {
+  @include span-columns(3 of 12);
+}
+
+.eb-grid-onefourth-third {
+  @include span-columns(3 of 12);
+}
+
+.eb-grid-onefourth-fourth {
+  @include span-columns(3 of 12);
+}
+
+// grid 3
+.eb-grid {
+  @include span-columns(12);
+}
+
+.eb-grid-onethird-first {
+  @include span-columns(4 of 12);
+}
+
+.eb-grid-onethird-second {
+  @include span-columns(4 of 12);
+}
+
+.eb-grid-onethird-third {
+  @include span-columns(4 of 12);
+}
+
+//grid 2
+.eb-grid-onehalf-first {
+  @include span-columns(6 of 12);
+}
+
+.eb-grid-onehalf-second {
+  @include span-columns(6 of 12);
+}

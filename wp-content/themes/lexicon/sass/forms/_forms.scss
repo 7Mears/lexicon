@@ -7,6 +7,10 @@ textarea {
 	vertical-align: baseline; /* Improves appearance and consistency in all browsers */
 }
 
+.form-allowed-tags {
+	display: none;
+}
+
 @import "buttons";
 
 @import "fields";

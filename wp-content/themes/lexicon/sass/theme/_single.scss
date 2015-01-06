@@ -14,13 +14,13 @@
   .alignleft {
     @include shift(-4.36);
     float: left;
-    padding-right: $pad;
+    padding: $gutter $column $gutter $column;
   }
 
   .alignright {
     margin-right: -37.18995%;
     float: right;
-    padding-left: $pad;
+    padding: $gutter $column $gutter $column;
   }
 }
 
@@ -32,6 +32,7 @@
   border-radius: $rad $rad 0 0;
 }
 
+// Featured image
 .single-post-header-wrap {
   position: relative;
   height: 100%;
@@ -43,6 +44,17 @@
   width: 100%;
   height: 100%;
   padding: ($column * 2) 0;
+
+  h2,
+  p {
+    text-align: center;
+    display: block;
+  }
+}
+
+// No featured image
+.single-post-header-alt {
+  padding: ($column * 2) 0 ($column * 6) 0;
 
   h2,
   p {

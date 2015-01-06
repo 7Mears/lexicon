@@ -27,11 +27,9 @@ get_header(); ?>
 
 <?php else : ?>
 
-<div class="single-post-header-wrap">
-	<div class ="single-post-header site-color-alt">
-		<h2><span class="text-bg"><?php the_title(); ?></span></h2>
-		<p><span class="text-bg">By <?php the_author() ?>, on <?php the_time('F jS, Y') ?> </span></p>
-	</div>
+<div class ="single-post-header-alt site-color-alt">
+	<h2><?php the_title(); ?></h2>
+	<p>By <?php the_author() ?>, on <?php the_time('F jS, Y') ?> </p>
 </div>
 
 <?php endif; ?>

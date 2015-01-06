@@ -935,11 +935,11 @@ body {
   .single-content .alignleft {
     margin-left: -37.18995%;
     float: left;
-    padding-right: 25px; }
+    padding: 1.618em 4.2358em 1.618em 4.2358em; }
   .single-content .alignright {
     margin-right: -37.18995%;
     float: right;
-    padding-left: 25px; }
+    padding: 1.618em 4.2358em 1.618em 4.2358em; }
 
 .single-content {
   background: #F2F3F8;
@@ -960,6 +960,13 @@ body {
   padding: 8.4716em 0; }
   .single-post-header h2,
   .single-post-header p {
+    text-align: center;
+    display: block; }
+
+.single-post-header-alt {
+  padding: 8.4716em 0 25.41481em 0; }
+  .single-post-header-alt h2,
+  .single-post-header-alt p {
     text-align: center;
     display: block; }
 
@@ -1006,15 +1013,6 @@ body {
 /*--------------------------------------------------------------
 13.6 Comments
 --------------------------------------------------------------*/
-.comments-area {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 57.35098%;
-  margin-left: 21.32451%; }
-  .comments-area:last-child {
-    margin-right: 0; }
-
 .comment-body {
   border-left: 1px dotted #a9aaad;
   padding-left: 1.618em;

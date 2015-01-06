@@ -1,7 +1,3 @@
-.comments-area {
-  @include span-columns(7 of 12);
-  @include shift(2.5);
-}
 
 .comment-body {
   border-left: 1px dotted $color__border;

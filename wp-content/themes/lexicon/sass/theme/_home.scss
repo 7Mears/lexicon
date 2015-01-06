@@ -10,3 +10,14 @@
 .home-bottom-widget {
   padding: $column 0;
 }
+
+.home-top {
+  padding: $column 0;
+}
+
+.home-middle-widget {
+  h4 {
+    text-align: center;
+    padding-bottom: $gutter;
+  }
+}

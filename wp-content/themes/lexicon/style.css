@@ -558,6 +558,9 @@ a {
   display: block;
   margin: 0 auto; }
 
+.text-center {
+  text-align: center; }
+
 /*--------------------------------------------------------------
 8.0 Clearings
 --------------------------------------------------------------*/
@@ -792,6 +795,18 @@ body {
 .eb-post--excerpt {
   border-top: 1px solid #a9aaad;
   padding: 25px 0 4.2358em 0; }
+  @media only screen and (max-width: 45em) {
+    .eb-post--title,
+    .eb-post--info,
+    .eb-post--excerpt {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%; }
+      .eb-post--title:last-child,
+      .eb-post--info:last-child,
+      .eb-post--excerpt:last-child {
+        margin-right: 0; } }
 
 /*--------------------------------------------------------------
 13.3 Homepage
@@ -813,6 +828,13 @@ body {
 .home-middle-widget,
 .home-bottom-widget {
   padding: 4.2358em 0; }
+
+.home-top {
+  padding: 4.2358em 0; }
+
+.home-middle-widget h4 {
+  text-align: center;
+  padding-bottom: 1.618em; }
 
 /*--------------------------------------------------------------
 13.4 Single Page
@@ -916,6 +938,7 @@ body {
 
 .text-bg {
   background: rgba(38, 50, 56, 0.7);
-  color: #F2F3F8; }
+  color: #F2F3F8;
+  padding: 5px 15px; }
 
 /*# sourceMappingURL=style.css.map */

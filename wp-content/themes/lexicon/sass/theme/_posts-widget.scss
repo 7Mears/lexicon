@@ -21,6 +21,6 @@
 .eb-post--excerpt {
   border-top: 1px solid $color__border;
   padding: $pad 0 $column 0;
-}
 
-// @include break-medium { @include span-columns(12); }
+  @include break-medium { @include span-columns(12); }
+}

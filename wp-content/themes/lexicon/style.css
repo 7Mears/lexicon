@@ -749,124 +749,105 @@ body {
   text-align: center; }
 
 /*--------------------------------------------------------------
-13.2 Header
+13.2 Posts widget
 --------------------------------------------------------------*/
-.site-description {
-  padding: 4.2358em;
-  text-align: center;
-  margin: 0; }
-
-.home-top {
-  text-align: center;
-  padding-bottom: 4.2358em; }
-
-/*--------------------------------------------------------------
-13.3 Homepage
---------------------------------------------------------------*/
-.home-middle-widget {
-  text-align: center;
-  padding: 4.2358em; }
-
-.home-middle {
+.eb-post--title {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 100%; }
-  .home-middle:last-child {
-    margin-right: 0; }
-
-.home-post--title {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 31.76157%; }
-  .home-post--title:last-child {
+  width: 31.76157%;
+  font-size: 22px;
+  font-size: 2.2rem; }
+  .eb-post--title:last-child {
     margin-right: 0; }
   @media only screen and (max-width: 45em) {
-    .home-post--title {
+    .eb-post--title {
       float: left;
       display: block;
       margin-right: 2.35765%;
       width: 74.41059%; }
-      .home-post--title:last-child {
+      .eb-post--title:last-child {
         margin-right: 0; } }
-  .home-post--title h4 {
-    font-size: 22px;
-    font-size: 2.2rem; }
 
-.home-post--info {
+.eb-post--info {
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 14.70196%;
   font-size: 12px;
   font-size: 1.2rem; }
-  .home-post--info:last-child {
+  .eb-post--info:last-child {
     margin-right: 0; }
   @media only screen and (max-width: 45em) {
-    .home-post--info {
+    .eb-post--info {
       float: left;
       display: block;
       margin-right: 2.35765%;
       width: 23.23176%;
       margin-right: 0; }
-      .home-post--info:last-child {
+      .eb-post--info:last-child {
         margin-right: 0; } }
-  .home-post--info span {
-    font-style: italic; }
 
-.home-post--content {
+.eb-post--excerpt {
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 48.82117%; }
-  .home-post--content:last-child {
+  .eb-post--excerpt:last-child {
     margin-right: 0; }
   @media only screen and (max-width: 45em) {
-    .home-post--content {
+    .eb-post--excerpt {
       float: left;
       display: block;
       margin-right: 2.35765%;
       width: 100%; }
-      .home-post--content:last-child {
+      .eb-post--excerpt:last-child {
         margin-right: 0; } }
 
-.home-post--title,
-.home-post--info,
-.home-post--content {
+.eb-post--title,
+.eb-post--info,
+.eb-post--excerpt {
   border-top: 1px solid #a9aaad;
   padding: 25px 0 4.2358em 0; }
   @media only screen and (max-width: 30em) {
-    .home-post--title,
-    .home-post--info,
-    .home-post--content {
+    .eb-post--title,
+    .eb-post--info,
+    .eb-post--excerpt {
       float: left;
       display: block;
       margin-right: 2.35765%;
       width: 100%;
       padding: 25px 0; }
-      .home-post--title:last-child,
-      .home-post--info:last-child,
-      .home-post--content:last-child {
+      .eb-post--title:last-child,
+      .eb-post--info:last-child,
+      .eb-post--excerpt:last-child {
         margin-right: 0; } }
 
 @media only screen and (max-width: 30em) {
-  .home-post--info {
+  .eb-post--info {
     border: 0; } }
 
 @media only screen and (max-width: 45em) {
-  .home-post--content {
+  .eb-post--excerpt {
     border: 0; } }
 
-.home-bottom {
-  text-align: center;
+/*--------------------------------------------------------------
+13.3 Homepage
+--------------------------------------------------------------*/
+.home-top {
+  padding: 16.9432em 0; }
+
+.home-middle-widget {
+  padding: 4.2358em 0; }
+
+.home-bottom-widget {
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 100%;
   padding-top: 4.2358em;
   padding-bottom: 8.4716em; }
-  .home-bottom:last-child {
+  .home-bottom-widget:last-child {
     margin-right: 0; }
 
 /*--------------------------------------------------------------

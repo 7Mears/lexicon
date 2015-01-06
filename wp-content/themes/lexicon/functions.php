@@ -157,17 +157,17 @@ function lexicon_widgets_init() {
 		'name'          => __( 'Home Top', 'wordsmith' ),
 		'id'            => 'hometop',
 		'description'   => 'This section is displayed at the top of the home page.',
-		'before_widget' => '<div class="home-top widget %2$s">',
+		'before_widget' => '<div class="home-top-widget widget %2$s">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h5>',
-		'after_title'   => '</h5>',
+		'before_title'  => '<h2><span class="text-bg">',
+		'after_title'   => '</h2></span>',
 		) );
 
 	//Home Middle
 	register_sidebar( array(
-		'name'          => __( 'Home Middle *', 'wordsmith' ),
+		'name'          => __( 'Home Middle', 'wordsmith' ),
 		'id'            => 'homemiddle',
-		'description'   => 'This section is displayed at the middle of the home page.  You need a widget here in order to have featured blog posts.',
+		'description'   => 'This section is displayed at the middle of the home page.',
 		'before_widget' => '<div class="home-middle-widget widget %2$s">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h4>',
@@ -179,7 +179,7 @@ function lexicon_widgets_init() {
 		'name'          => __( 'Home Bottom', 'wordsmith' ),
 		'id'            => 'homebottom',
 		'description'   => 'This section is displayed at the bottom of the home page.',
-		'before_widget' => '<div class="home-bottom %2$s">',
+		'before_widget' => '<div class="home-bottom-widget %2$s">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h5>',
 		'after_title'   => '</h5>',

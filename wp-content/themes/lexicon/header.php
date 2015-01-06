@@ -46,6 +46,6 @@
 
 <?php if(is_front_page() ) { ?>
 	<div class="home-header--image">
-<?php } ?><!-- #header image -->
+<?php } ?><!-- header image -->
 
 	<div id="content" class="site-content">

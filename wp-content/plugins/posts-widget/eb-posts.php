@@ -51,10 +51,10 @@ class CategoryPosts extends WP_Widget {
 		$sizes = get_option('eb_cat_post_thumb_sizes');
 
 		// If not title, use the name of the category.
-		if( !$instance["title"] ) {
-			$category_info = get_category($instance["cat"]);
-			$instance["title"] = $category_info->name;
-	  }
+		// if( !$instance["title"] ) {
+		// 	$category_info = get_category($instance["cat"]);
+		// 	$instance["title"] = $category_info->name;
+	  // }
 
 	  $valid_sort_orders = array('date', 'title', 'comment_count', 'rand');
 	  if ( in_array($instance['sort_by'], $valid_sort_orders) ) {
@@ -86,7 +86,7 @@ class CategoryPosts extends WP_Widget {
 		if( isset( $instance["title_link"] ) )
 			echo '<a href="' . get_category_link($instance["cat"]) . '">' . $instance["title"] . '</a>';
 		else
-			// echo $instance["title"];
+			echo $instance["title"];
 		echo $after_title;
 
 		// Post list

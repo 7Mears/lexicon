@@ -1,12 +1,8 @@
-.footer-content {
-  @include span-columns(12);
-}
-
 .footer-widget {
+  @include span-columns(12);
 
   .widget-title {
     @include span-columns(4 of 12);
-
     @include font-size(1.8);
     font-family: $font__alt;
   }

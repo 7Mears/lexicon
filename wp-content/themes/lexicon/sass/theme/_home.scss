@@ -1,15 +1,12 @@
-// Home Top
-.home-top {
-  padding: ($column * 4) 0;
-}
-// Home Middle
-.home-middle-widget {
-  padding: $column 0;
+.home-top,
+.home-middle,
+.home-bottom {
+  @include span-columns(12);
+  @include omega;
 }
 
-// Home Bottom
+.home-top-widget,
+.home-middle-widget,
 .home-bottom-widget {
-  @include span-columns(12);
-  padding-top: $column;
-  padding-bottom: ( $column * 2 );
+  padding: $column 0;
 }

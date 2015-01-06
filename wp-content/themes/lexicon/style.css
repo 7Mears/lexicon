@@ -751,6 +751,14 @@ body {
 /*--------------------------------------------------------------
 13.2 Posts widget
 --------------------------------------------------------------*/
+.eb-post-item {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%; }
+  .eb-post-item:last-child {
+    margin-right: 0; }
+
 .eb-post--title {
   float: left;
   display: block;
@@ -760,14 +768,6 @@ body {
   font-size: 2.2rem; }
   .eb-post--title:last-child {
     margin-right: 0; }
-  @media only screen and (max-width: 45em) {
-    .eb-post--title {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 74.41059%; }
-      .eb-post--title:last-child {
-        margin-right: 0; } }
 
 .eb-post--info {
   float: left;
@@ -778,15 +778,6 @@ body {
   font-size: 1.2rem; }
   .eb-post--info:last-child {
     margin-right: 0; }
-  @media only screen and (max-width: 45em) {
-    .eb-post--info {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 23.23176%;
-      margin-right: 0; }
-      .eb-post--info:last-child {
-        margin-right: 0; } }
 
 .eb-post--excerpt {
   float: left;
@@ -795,60 +786,33 @@ body {
   width: 48.82117%; }
   .eb-post--excerpt:last-child {
     margin-right: 0; }
-  @media only screen and (max-width: 45em) {
-    .eb-post--excerpt {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 100%; }
-      .eb-post--excerpt:last-child {
-        margin-right: 0; } }
 
 .eb-post--title,
 .eb-post--info,
 .eb-post--excerpt {
   border-top: 1px solid #a9aaad;
   padding: 25px 0 4.2358em 0; }
-  @media only screen and (max-width: 30em) {
-    .eb-post--title,
-    .eb-post--info,
-    .eb-post--excerpt {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 100%;
-      padding: 25px 0; }
-      .eb-post--title:last-child,
-      .eb-post--info:last-child,
-      .eb-post--excerpt:last-child {
-        margin-right: 0; } }
-
-@media only screen and (max-width: 30em) {
-  .eb-post--info {
-    border: 0; } }
-
-@media only screen and (max-width: 45em) {
-  .eb-post--excerpt {
-    border: 0; } }
 
 /*--------------------------------------------------------------
 13.3 Homepage
 --------------------------------------------------------------*/
-.home-top {
-  padding: 16.9432em 0; }
-
-.home-middle-widget {
-  padding: 4.2358em 0; }
-
-.home-bottom-widget {
+.home-top,
+.home-middle,
+.home-bottom {
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 100%;
-  padding-top: 4.2358em;
-  padding-bottom: 8.4716em; }
-  .home-bottom-widget:last-child {
+  margin-right: 0; }
+  .home-top:last-child,
+  .home-middle:last-child,
+  .home-bottom:last-child {
     margin-right: 0; }
+
+.home-top-widget,
+.home-middle-widget,
+.home-bottom-widget {
+  padding: 4.2358em 0; }
 
 /*--------------------------------------------------------------
 13.4 Single Page
@@ -905,43 +869,42 @@ body {
 /*--------------------------------------------------------------
 13.5 Footer
 --------------------------------------------------------------*/
-.footer-content {
+.footer-widget {
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 100%; }
-  .footer-content:last-child {
+  .footer-widget:last-child {
     margin-right: 0; }
-
-.footer-widget .widget-title {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 31.76157%;
-  font-size: 18px;
-  font-size: 1.8rem;
-  font-family: "Lato", sans-serif; }
-  .footer-widget .widget-title:last-child {
-    margin-right: 0; }
-.footer-widget .widget-content {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 65.88078%; }
-  .footer-widget .widget-content:last-child {
-    margin-right: 0; }
-.footer-widget .widget-content--split {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 31.76157%; }
-  .footer-widget .widget-content--split:last-child {
-    margin-right: 0; }
-.footer-widget .widget-title,
-.footer-widget .widget-content,
-.footer-widget .widget-content--split {
-  border-top: 1px solid #384248;
-  padding: 25px 0 4.2358em 0; }
+  .footer-widget .widget-title {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+    font-size: 18px;
+    font-size: 1.8rem;
+    font-family: "Lato", sans-serif; }
+    .footer-widget .widget-title:last-child {
+      margin-right: 0; }
+  .footer-widget .widget-content {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 65.88078%; }
+    .footer-widget .widget-content:last-child {
+      margin-right: 0; }
+  .footer-widget .widget-content--split {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%; }
+    .footer-widget .widget-content--split:last-child {
+      margin-right: 0; }
+  .footer-widget .widget-title,
+  .footer-widget .widget-content,
+  .footer-widget .widget-content--split {
+    border-top: 1px solid #384248;
+    padding: 25px 0 4.2358em 0; }
 
 /*--------------------------------------------------------------
 13.6 Colors

@@ -1,22 +1,19 @@
+.eb-post-item {
+  @include span-columns(12);
+}
+
 .eb-post--title {
   @include span-columns(4 of 12);
-  @include break-medium { @include span-columns(9); }
   @include font-size(2.2);
 }
 
 .eb-post--info {
   @include span-columns(2 of 12);
   @include font-size(1.2);
-  @include break-medium {
-    @include span-columns(3);
-    @include omega;
-  }
-
 }
 
 .eb-post--excerpt {
   @include span-columns(6 of 12);
-  @include break-medium { @include span-columns(12); }
 }
 
 .eb-post--title,
@@ -24,13 +21,6 @@
 .eb-post--excerpt {
   border-top: 1px solid $color__border;
   padding: $pad 0 $column 0;
-
-  @include break-small {
-    @include span-columns(12);
-    padding: 25px 0;
-  }
 }
 
-.eb-post--info { @include break-small { border: 0; } }
-
-.eb-post--excerpt { @include break-medium { border: 0; } }
+// @include break-medium { @include span-columns(12); }

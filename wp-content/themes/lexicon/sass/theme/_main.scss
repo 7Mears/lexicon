@@ -1,5 +1,6 @@
 html,
-body {
+body,
+.wrapper {
   height: 100%;
   width: 100%;
 }
@@ -10,5 +11,6 @@ body {
 }
 
 .site-title {
-  text-align: center;
+  padding-left: $pad;
+  @include font-size(3.4);
 }

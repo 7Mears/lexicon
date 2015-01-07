@@ -10,6 +10,7 @@
 
 	</div><!-- #site-content -->
 
+
 	<footer id="colophon" class="site-footer site-color-alt" role="contentinfo">
 		<div class="site-info">
 		<?php if ( is_active_sidebar( 'footer' ) ) : ?>
@@ -20,6 +21,11 @@
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
+
+	</div><!-- #nav wrapper -->
+<nav id="site-navigation" class="main-navigation">
+	<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+</nav><!-- #site-navigation -->
 
 <?php wp_footer(); ?>
 

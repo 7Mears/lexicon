@@ -219,7 +219,7 @@ add_action( 'wp_enqueue_scripts', 'lexicon_scripts' );
 * Fonts!
 */
 function load_fonts() {
-	wp_register_style('googleFonts', 'http://fonts.googleapis.com/css?family=Lato|Merriweather:400,300,300italic,400italic,700,700italic');
+	wp_register_style('googleFonts', 'http://fonts.googleapis.com/css?family=Lato:300,400|Merriweather:400,300,300italic,400italic,700,700italic');
 	wp_enqueue_style( 'googleFonts');
 }
 add_action('wp_print_styles', 'load_fonts');
@@ -275,7 +275,8 @@ function custom_wp_nav_menu($var) {
 		'first',
 		'last',
 		'vertical',
-		'horizontal'
+		'horizontal',
+		'menu-item-has-children'
 	)
 	) : '';
 }
@@ -294,9 +295,3 @@ function current_to_active($text){
 	return $text;
 }
 add_filter ('wp_nav_menu','current_to_active');
-//Deletes empty classes and removes the sub menu class
-function strip_empty_classes($menu) {
-	$menu = preg_replace('/ class=""| class="sub-menu"/','',$menu);
-	return $menu;
-}
-add_filter ('wp_nav_menu','strip_empty_classes');

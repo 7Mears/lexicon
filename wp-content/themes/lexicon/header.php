@@ -28,23 +28,20 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="hfeed site">
-	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'lexicon' ); ?></a>
 
-	<header id="masthead" class="site-header site-color-alt" role="banner">
-		<div class="site-branding">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-		</div><!-- .site-branding -->
+<header id="masthead" class="site-header site-color-alt" role="banner">
+	<div class="site-branding">
+		<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+	</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation outer-center" role="navigation">
-			<div class="inner-center">
-				<button class="menu-toggle" aria-controls="menu" aria-expanded="false"><?php _e( 'Menu', 'lexicon' ); ?></button>
-				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-			</div>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+	<a id="menu-trigger" href="#0"><span class="menu-text">Menu</span><span class="menu-icon"></span></a>
+</header><!-- #masthead -->
 
-<?php if(is_front_page() ) { ?>
-	<div class="home-header--image">
-<?php } ?><!-- header image -->
-	<div id="content" class="site-content">
+<div class="nav-wrap">
+	<div id="page" class="hfeed site">
+		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'lexicon' ); ?></a>
+
+		<?php if(is_front_page() ) { ?>
+		<div class="home-header--image">
+			<?php } ?><!-- header image -->
+			<div id="content" class="site-content">

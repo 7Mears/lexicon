@@ -81,9 +81,19 @@
 }
 
 @media screen and (max-width: 600px) {
+
+
+	.main-navigation ul li {
+		width: 100%;
+		padding: 25px 0;
+		text-align: center;
+	}
+
+
 	.menu-toggle,
 	.main-navigation.toggled .nav-menu {
 		display: block;
+		width: 100px;
 	}
 
 	.main-navigation ul {

@@ -38,7 +38,7 @@
 
 		<nav id="site-navigation" class="main-navigation outer-center" role="navigation">
 			<div class="inner-center">
-				<button class="menu-toggle" aria-controls="menu" aria-expanded="false"><?php _e( 'Primary Menu', 'lexicon' ); ?></button>
+				<button class="menu-toggle" aria-controls="menu" aria-expanded="false"><?php _e( 'Menu', 'lexicon' ); ?></button>
 				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 			</div>
 		</nav><!-- #site-navigation -->

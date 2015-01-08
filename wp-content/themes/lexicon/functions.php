@@ -21,7 +21,6 @@ if ( ! function_exists( 'lexicon_setup' ) ) :
  * as indicating support for post thumbnails.
  */
 function lexicon_setup() {
-
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
@@ -70,10 +69,10 @@ function lexicon_setup() {
 	) );
 
 	// Set up the WordPress core custom background feature.
-	// add_theme_support( 'custom-background', apply_filters( 'lexicon_custom_background_args', array(
-	// 	'default-color' => 'ffffff',
-	// 	'default-image' => '',
-	// ) ) );
+	add_theme_support( 'custom-background', apply_filters( 'lexicon_custom_background_args', array(
+		'default-color' => 'ffffff',
+		'default-image' => '',
+	) ) );
 
 	// Add theme support for Custom Header
 	$header_args = array(
@@ -94,46 +93,70 @@ function lexicon_setup() {
 
 }
 endif; // lexicon_setup
-add_action( 'after_setup_theme', 'lexicon_setup' );
-
 
 /**
-* Custom theme colors
-*
+* Enqueue scripts and styles.
 */
-function lexicon_customizer( $wp_customize ) {
-	// add new section
-	$wp_customize->add_section( 'lexicon_theme_colors', array(
-		'title' => __( 'Theme Colors', 'lexicon' ),
-		'priority' => 100,
-		) );
+function lexicon_scripts() {
+	wp_enqueue_style( 'lexicon-style', get_stylesheet_uri() );
 
-		// add color picker setting
-		$wp_customize->add_setting( 'link_color', array(
-			'default' => '#ff0000'
-		) );
+	wp_enqueue_script( 'lexicon-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
-		// add color picker control
-		$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'link_color', array(
-			'label' => 'Link Color',
-			'section' => 'lexicon_theme_colors',
-			'settings' => 'link_color',
-		) ) );
+	wp_enqueue_script( 'lexicon-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+
+	wp_register_style('googleFonts', 'http://fonts.googleapis.com/css?family=Lato:300,400|Merriweather:400,300,300italic,400italic,700,700italic');
+	wp_enqueue_style( 'googleFonts');
+
+	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+		wp_enqueue_script( 'comment-reply' );
+	}
 }
-add_action( 'customize_register', 'lexicon_customizer' );
+add_action( 'wp_enqueue_scripts', 'lexicon_scripts' );
 
-function lexicon_customizer_head_styles() {
-	$link_color = get_theme_mod( 'link_color' );
-
-	if ( $link_color != '#ff0000' ) :
-		?>
-		<style type="text/css">
-		a { color: <?php echo $link_color; ?>; }
-		</style>
-		<?php
-	endif;
+/**
+* Clean up wp_nav_menu
+*/
+//Deletes all CSS classes and id's, except for those listed in the array below
+function custom_wp_nav_menu($var) {
+	return is_array($var) ? array_intersect($var, array(
+		//List of allowed menu classes
+		'current_page_item',
+		'current_page_parent',
+		'current_page_ancestor',
+		'first',
+		'last',
+		'vertical',
+		'horizontal',
+		'menu-item-has-children'
+	)
+	) : '';
 }
-add_action( 'wp_head', 'lexicon_customizer_head_styles' );
+add_filter('nav_menu_css_class', 'custom_wp_nav_menu');
+add_filter('nav_menu_item_id', 'custom_wp_nav_menu');
+add_filter('page_css_class', 'custom_wp_nav_menu');
+//Replaces "current-menu-item" with "active"
+function current_to_active($text){
+	$replace = array(
+		//List of menu item classes that should be changed to "active"
+		'current_page_item' => 'active',
+		'current_page_parent' => 'active',
+		'current_page_ancestor' => 'active',
+	);
+	$text = str_replace(array_keys($replace), $replace, $text);
+	return $text;
+}
+add_filter ('wp_nav_menu','current_to_active');
+
+
+add_action( 'after_setup_theme', 'lexicon_setup' );
+
+/**
+* Changes style for excerpt Read More
+*/
+function new_excerpt_more($more) {
+	return ' ... ' . '<a href="'. get_permalink($post->ID) . '" class="more-link">Read more</a>';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
 
 /**
  * Register widget area.
@@ -199,30 +222,6 @@ function lexicon_widgets_init() {
 }
 add_action( 'widgets_init', 'lexicon_widgets_init' );
 
-/**
- * Enqueue scripts and styles.
- */
-function lexicon_scripts() {
-	wp_enqueue_style( 'lexicon-style', get_stylesheet_uri() );
-
-	wp_enqueue_script( 'lexicon-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
-
-	wp_enqueue_script( 'lexicon-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
-
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
-}
-add_action( 'wp_enqueue_scripts', 'lexicon_scripts' );
-
-/**
-* Fonts!
-*/
-function load_fonts() {
-	wp_register_style('googleFonts', 'http://fonts.googleapis.com/css?family=Lato:300,400|Merriweather:400,300,300italic,400italic,700,700italic');
-	wp_enqueue_style( 'googleFonts');
-}
-add_action('wp_print_styles', 'load_fonts');
 
 /**
  * Implement the Custom Header feature.
@@ -251,47 +250,75 @@ require get_template_directory() . '/inc/jetpack.php';
 
 
 /**
-* Adds a Read more link to excerpts
+* Customizer
+*
 */
+function lexicon_customizer( $wp_customize ) {
+	// echo "<pre>";
+	// var_dump( $wp_customize );
+	// echo "</pre>";
 
-function new_excerpt_more($more) {
-	return ' ... ' . '<a href="'. get_permalink($post->ID) . '" class="more-link">Read more</a>';
+
+// Colors
+// add new section
+$wp_customize->add_section( 'lexicon_theme_colors', array(
+	'title' => __( 'Theme Colors', 'lexicon' ),
+	'priority' => 100,
+	) );
+
+	// add color picker setting
+	$wp_customize->add_setting( 'link_color', array(
+		'default' => '#ff0000'
+	) );
+
+	// add color picker control
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'link_color', array(
+		'label' => 'Link Color',
+		'section' => 'lexicon_theme_colors',
+		'settings' => 'link_color',
+	) ) );
+
+// Change descriptions
+$wp_customize->get_control('blogdescription')->label = __('Site Description', 'lexicon_customizer');
+
+// Create custom panels
+$wp_customize->add_panel( 'general_settings', array(
+	'priority' => 10,
+	'theme_supports' => '',
+	'title' => __( 'General Settings', 'lexicon_customizer' ),
+	'description' => __( 'Controls the basic settings for the theme.', 'lexicon_customizer' ),
+) );
+
+$wp_customize->add_panel( 'design_settings', array(
+	'priority' => 20,
+	'theme_supports' => '',
+	'title' => __( 'Design Settings', 'lexicon_customizer' ),
+	'description' => __( 'Controls the basic design settings for the theme.', 'lexicon_custoizer' ),
+) );
+
+// Assign sections to panels
+$wp_customize ->get_section('title_tagline')->panel = 'general_settings';
+$wp_customize ->get_section('nav')->panel = 'general_settings';
+$wp_customize ->get_section('static_front_page')->panel = 'general_settings';
+
+$wp_customize ->get_section('background_image')->panel = 'design_settings';
+$wp_customize ->get_section('background_image')->priority = 1000;
+$wp_customize ->get_section('lexicon_theme_colors')->panel = 'design_settings';
+$wp_customize ->get_section('header_image')->panel = 'design_settings';
+$wp_customize ->get_section('colors')->panel = 'design_settings';
 }
+add_action( 'customize_register', 'lexicon_customizer' );
 
-add_filter('excerpt_more', 'new_excerpt_more');
+// Add customizer changes to head
+function lexicon_customizer_head_styles() {
+	$link_color = get_theme_mod( 'link_color' );
 
-
-
-/**
-* Cleaning up wp_nav_menu
-*/
-//Deletes all CSS classes and id's, except for those listed in the array below
-function custom_wp_nav_menu($var) {
-	return is_array($var) ? array_intersect($var, array(
-		//List of allowed menu classes
-		'current_page_item',
-		'current_page_parent',
-		'current_page_ancestor',
-		'first',
-		'last',
-		'vertical',
-		'horizontal',
-		'menu-item-has-children'
-	)
-	) : '';
+	if ( $link_color != '#ff0000' ) :
+		?>
+		<style type="text/css">
+		a { color: <?php echo $link_color; ?>; }
+		</style>
+		<?php
+	endif;
 }
-add_filter('nav_menu_css_class', 'custom_wp_nav_menu');
-add_filter('nav_menu_item_id', 'custom_wp_nav_menu');
-add_filter('page_css_class', 'custom_wp_nav_menu');
-//Replaces "current-menu-item" with "active"
-function current_to_active($text){
-	$replace = array(
-		//List of menu item classes that should be changed to "active"
-		'current_page_item' => 'active',
-		'current_page_parent' => 'active',
-		'current_page_ancestor' => 'active',
-	);
-	$text = str_replace(array_keys($replace), $replace, $text);
-	return $text;
-}
-add_filter ('wp_nav_menu','current_to_active');
+add_action( 'wp_head', 'lexicon_customizer_head_styles' );

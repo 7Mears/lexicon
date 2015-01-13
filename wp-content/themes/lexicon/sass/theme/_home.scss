@@ -12,7 +12,8 @@
 }
 
 .home-top {
-  padding: $column 0;
+  padding: ($column * 3) 0;
+  color: $white;
 }
 
 .home-middle-widget {

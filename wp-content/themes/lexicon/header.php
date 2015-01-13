@@ -29,12 +29,12 @@
 
 <body <?php body_class(); ?>>
 
-<header id="masthead" class="site-header site-color-alt" role="banner">
+<header id="masthead" class="site-header" role="banner">
 	<div class="site-branding">
 		<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 	</div><!-- .site-branding -->
 
-	<a id="menu-trigger" href="#0"><span class="menu-text">Menu</span><span class="menu-icon"></span></a>
+	<a id="menu-trigger" href="#0"><span class="menu-icon"></span></a>
 </header><!-- #masthead -->
 
 <div class="nav-wrap">

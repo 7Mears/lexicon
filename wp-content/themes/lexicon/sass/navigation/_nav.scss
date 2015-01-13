@@ -1,3 +1,15 @@
+.main-navigation {
+  padding: 0 $gutter;
+}
+
+.nav-title {
+  color: $white;
+  font-family: $font__main;
+  padding-top: 18px;
+  @include font-size(2.0);
+  margin: 0;
+}
+
 .nav-wrap {
   /* set a min-height and a z-index to be sure that the main element completely covers the lateral menu */
   min-height: 100%;
@@ -67,7 +79,6 @@ header.is-fixed {
   top: 0;
   height: 100%;
   width: 50px;
-  background-color: $color__nav-icon-bg;
 }
 
 /* this span is the central line in the menu icon */
@@ -81,7 +92,7 @@ header.is-fixed {
   @include transform(translateX(-50%) translateY(-50%));
   width: 20px;
   height: 2px;
-  background-color: #FFF;
+  background-color: $white;
 
 }
 
@@ -160,20 +171,20 @@ header.is-fixed {
   }
 
   .sub-menu {
-    padding: 0 10px 20px 15px;
+    padding: 0 10px 20px 0;
     display: none;
   }
 
   a {
     display: block;
     line-height: 2em;
-    padding: 0 16px 0 32px;
+    padding: 0 16px 0 0;
     text-decoration: none;
   }
 
   a.current {
     background-color: #3a4a4d;
-    color: #FFF;
+    color: $white;
   }
 
   ul {
@@ -209,7 +220,6 @@ header.is-fixed {
 /* style menu items which have a submenu  */
 .menu-item-has-children > a {
   position: relative;
-  text-transform: uppercase;
   font-weight: 400;
   /* this is the right arrow to show that the item has a submenu  */
 }

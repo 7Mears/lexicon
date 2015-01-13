@@ -24,7 +24,16 @@
 
 	</div><!-- #nav wrapper -->
 <nav id="site-navigation" class="main-navigation">
+	<h5 class="nav-title">Navigation</h5>
 	<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+
+
+	<?php if ( is_active_sidebar( 'navigation' ) ) : ?>
+		<div class="navigation-widget widget-area">
+			<?php dynamic_sidebar( 'navigation' ); ?>
+		</div><!-- #footer-widget -->
+	<?php endif; ?>
+
 </nav><!-- #site-navigation -->
 
 <?php wp_footer(); ?>

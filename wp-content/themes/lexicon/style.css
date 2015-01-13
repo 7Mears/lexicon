@@ -423,6 +423,17 @@ a {
 /*--------------------------------------------------------------
 5.2 Menus
 --------------------------------------------------------------*/
+.main-navigation {
+  padding: 0 1.618em; }
+
+.nav-title {
+  color: #F2F3F8;
+  font-family: "Merriweather", serif;
+  padding-top: 18px;
+  font-size: 20px;
+  font-size: 2rem;
+  margin: 0; }
+
 .nav-wrap {
   /* set a min-height and a z-index to be sure that the main element completely covers the lateral menu */
   min-height: 100%;
@@ -490,8 +501,7 @@ header.is-fixed {
   right: 0;
   top: 0;
   height: 100%;
-  width: 50px;
-  background-color: #384248; }
+  width: 50px; }
 
 /* this span is the central line in the menu icon */
 .menu-icon {
@@ -508,7 +518,7 @@ header.is-fixed {
   transform: translateX(-50%) translateY(-50%);
   width: 20px;
   height: 2px;
-  background-color: #FFF; }
+  background-color: #F2F3F8; }
 
 /* these are the upper and lower lines in the menu icon */
 .menu-icon::before,
@@ -591,16 +601,16 @@ header.is-fixed {
   #site-navigation .menu {
     margin: 10px 0 16px; }
   #site-navigation .sub-menu {
-    padding: 0 10px 20px 15px;
+    padding: 0 10px 20px 0;
     display: none; }
   #site-navigation a {
     display: block;
     line-height: 2em;
-    padding: 0 16px 0 32px;
+    padding: 0 16px 0 0;
     text-decoration: none; }
   #site-navigation a.current {
     background-color: #3a4a4d;
-    color: #FFF; }
+    color: #F2F3F8; }
   #site-navigation ul {
     list-style: none; }
 
@@ -637,7 +647,6 @@ header.is-fixed {
 /* style menu items which have a submenu  */
 .menu-item-has-children > a {
   position: relative;
-  text-transform: uppercase;
   font-weight: 400;
   /* this is the right arrow to show that the item has a submenu  */ }
 

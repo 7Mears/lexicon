@@ -182,8 +182,8 @@ function lexicon_widgets_init() {
 		'description'   => 'This section is displayed at the top of the home page.',
 		'before_widget' => '<div class="home-top-widget widget %2$s">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h2><span class="text-bg">',
-		'after_title'   => '</h2></span>',
+		'before_title'  => '<h2 class="center">',
+		'after_title'   => '</h2>',
 		) );
 
 	//Home Middle
@@ -217,6 +217,17 @@ function lexicon_widgets_init() {
 		'after_widget'  => '</div>',
 		'before_title'  => '<h1 class="widget-title">',
 		'after_title'   => '</h1>',
+		) );
+
+	//Navigation
+	register_sidebar( array(
+		'name'          => __( 'Navigation', 'wordsmith' ),
+		'id'            => 'navigation',
+		'description'   => 'This section is displayed in the navigation area.',
+		'before_widget' => '<div id="%1$s" class="navigation-section %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h5 class="nav-title">',
+		'after_title'   => '</h5>',
 		) );
 
 }

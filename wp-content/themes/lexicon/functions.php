@@ -164,6 +164,17 @@ add_filter('excerpt_more', 'new_excerpt_more');
  * @link http://codex.wordpress.org/Function_Reference/register_sidebar
  */
 function lexicon_widgets_init() {
+	//Navigation
+	register_sidebar( array(
+		'name'          => __( 'Navigation', 'wordsmith' ),
+		'id'            => 'navigation',
+		'description'   => 'This section is displayed in the navigation area.',
+		'before_widget' => '<div id="%1$s" class="navigation-section %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h5 class="nav-title">',
+		'after_title'   => '</h5>',
+		) );
+
 	//Sidebar
 	register_sidebar( array(
 		'name'          => __( 'Sidebar', 'lexicon' ),
@@ -217,17 +228,6 @@ function lexicon_widgets_init() {
 		'after_widget'  => '</div>',
 		'before_title'  => '<h1 class="widget-title">',
 		'after_title'   => '</h1>',
-		) );
-
-	//Navigation
-	register_sidebar( array(
-		'name'          => __( 'Navigation', 'wordsmith' ),
-		'id'            => 'navigation',
-		'description'   => 'This section is displayed in the navigation area.',
-		'before_widget' => '<div id="%1$s" class="navigation-section %2$s">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<h5 class="nav-title">',
-		'after_title'   => '</h5>',
 		) );
 
 }

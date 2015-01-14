@@ -423,7 +423,7 @@ a {
 5.2 Menus
 --------------------------------------------------------------*/
 .main-navigation {
-  padding: 0 1.618em;
+  padding: 0 35px;
   color: #F2F3F8; }
   .main-navigation ul {
     margin: 0; }
@@ -616,7 +616,7 @@ header.is-fixed {
   position: absolute;
   top: 50%;
   bottom: auto;
-  right: 1em;
+  left: -18px;
   background: url("img/cd-arrow.svg") no-repeat center center;
   background-size: 8px 11px;
   -webkit-transform: translateY(-50%);

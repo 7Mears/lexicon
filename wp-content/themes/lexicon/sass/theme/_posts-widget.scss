@@ -23,4 +23,5 @@
   padding: $pad 0 $column 0;
 
   @include break-medium { @include span-columns(12); }
+
 }

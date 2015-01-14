@@ -424,10 +424,12 @@ a {
 5.2 Menus
 --------------------------------------------------------------*/
 .main-navigation {
-  padding: 0 1.618em; }
+  padding: 0 1.618em;
+  color: #F2F3F8; }
+  .main-navigation ul {
+    margin: 0; }
 
 .nav-title {
-  color: #F2F3F8;
   font-family: "Merriweather", serif;
   padding-top: 18px;
   font-size: 20px;

@@ -1,9 +1,14 @@
 .main-navigation {
   padding: 0 $gutter;
+  color: $white;
+
+  ul {
+    margin: 0;
+  }
+  
 }
 
 .nav-title {
-  color: $white;
   font-family: $font__main;
   padding-top: 18px;
   @include font-size(2.0);

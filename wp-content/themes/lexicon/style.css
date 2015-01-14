@@ -150,7 +150,7 @@ button,
 input,
 select,
 textarea {
-  color: #263238;
+  color: #242927;
   font-family: "Merriweather", serif;
   font-size: 14px;
   line-height: 2;
@@ -245,7 +245,7 @@ big {
 3.0 Elements
 --------------------------------------------------------------*/
 hr {
-  background-color: #384248;
+  background-color: #2f3633;
   border: 0;
   height: 1px;
   margin-bottom: 1.5em; }
@@ -298,12 +298,12 @@ th {
   cursor: pointer; }
 
 .button {
-  border: 1px solid #70B7BA; }
+  border: 1px solid #dec27b; }
   .button:hover {
     border: 1px solid #6987C9; }
 
 .button-alt {
-  border: 1px solid #70B7BA; }
+  border: 1px solid #dec27b; }
   .button-alt:hover {
     border: 1px solid #6987C9; }
 
@@ -345,7 +345,7 @@ input[type="submit"] {
   padding: 8px 25px;
   border-radius: 5px;
   cursor: pointer;
-  border: 1px solid #70B7BA;
+  border: 1px solid #dec27b;
   background: #F2F3F8; }
 
 button:hover,
@@ -413,9 +413,9 @@ textarea {
 5.1 Links
 --------------------------------------------------------------*/
 a {
-  color: #70B7BA; }
+  color: #dec27b; }
   a:visited {
-    color: #70B7BA; }
+    color: #dec27b; }
   a:hover, a:focus, a:active {
     color: #6987C9; }
 
@@ -578,7 +578,7 @@ header.is-fixed {
   /* the secondary navigation is covered by the main element */
   z-index: 1;
   width: 260px;
-  background-color: #263238;
+  background-color: #242927;
   overflow-y: auto;
   /* Force Hardware Acceleration in WebKit */
   -webkit-transform: translateZ(0);
@@ -1172,7 +1172,7 @@ body,
   .footer-widget .widget-title,
   .footer-widget .widget-content,
   .footer-widget .widget-content--split {
-    border-top: 1px solid #384248;
+    border-top: 1px solid #2f3633;
     padding: 25px 0 4.2358em 0; }
 
 /*--------------------------------------------------------------
@@ -1188,12 +1188,15 @@ body,
 --------------------------------------------------------------*/
 .site-color-alt,
 .main-navigation ul ul {
-  background: #263238;
+  background: #242927;
   color: #F2F3F8; }
 
 .text-bg {
   background: rgba(0, 0, 0, 0.4);
   color: #F2F3F8;
   padding: 5px 15px; }
+
+.main-navigation .search-field {
+  background: #2f3633; }
 
 /*# sourceMappingURL=style.css.map */

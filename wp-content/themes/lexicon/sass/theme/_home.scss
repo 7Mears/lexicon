@@ -6,7 +6,6 @@
 }
 
 .home-top-widget,
-.home-middle-widget,
 .home-bottom-widget {
   padding: $column 0;
 }
@@ -16,9 +15,7 @@
   color: $white;
 }
 
-.home-middle-widget {
-  h4 {
-    text-align: center;
-    padding-bottom: $gutter;
-  }
+.home-middle {
+  padding: 0;
+  margin: 0;
 }

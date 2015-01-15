@@ -19,7 +19,6 @@ get_header(); ?>
 
   </div><!-- #site-content -->
 </div><!-- #header-image -->
-<div class="site-content">
 
 <?php if ( is_active_sidebar( 'homemiddle' ) ) : ?>
 <section id="home-middle" class="home-middle">
@@ -28,6 +27,7 @@ get_header(); ?>
 <?php endif; ?>
 <!-- #home-middle -->
 
+<div class="site-content">
 
 <?php if ( is_active_sidebar( 'homebottom' ) ) : ?>
 <section id="home-bottom" class="home-bottom">

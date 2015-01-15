@@ -4,6 +4,7 @@
  * Handles toggling the navigation menu for small screens.
  */
 jQuery(document).ready(function($){
+
 	var $menu_trigger = $('#menu-trigger'),
 	$content_wrapper = $('.nav-wrap'),
 	$navigation = $('header');

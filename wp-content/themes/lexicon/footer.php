@@ -10,7 +10,6 @@
 
 	</div><!-- #site-content -->
 
-
 	<footer id="colophon" class="site-footer site-color-alt" role="contentinfo">
 		<div class="site-info">
 		<?php if ( is_active_sidebar( 'footer' ) ) : ?>

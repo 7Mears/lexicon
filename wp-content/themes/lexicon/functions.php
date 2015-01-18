@@ -215,8 +215,8 @@ function lexicon_widgets_init() {
 		'description'   => 'This section is displayed at the bottom of the home page.',
 		'before_widget' => '<div class="home-bottom-widget %2$s">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h5>',
-		'after_title'   => '</h5>',
+		'before_title'  => '<h4>',
+		'after_title'   => '</h4>',
 		) );
 
 	//Footer

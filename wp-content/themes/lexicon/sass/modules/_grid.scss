@@ -1,17 +1,27 @@
-// grid 4
-.eb-grid {
-  @include span-columns(12);
+.eb-column {
+  padding: $column;
 }
 
-.eb-grid-onefourth {
-  @include span-columns(3 of 12);
+.eb-col-third,
+.eb-col-twothird,
+.eb-col-quarter,
+.eb-col-half {
+  padding: 0 2.5%;
+  float: left;
 }
 
-.eb-grid-onethird {
-  @include span-columns(4 of 12);
+.eb-col-third {
+  width: 33.3333%;
 }
 
-//grid 2
-.eb-grid-onehalf {
-  @include span-columns(6 of 12);
+.eb-col-twothird {
+  width: 66.6666%;
+}
+
+.eb-col-quarter {
+  width: 25%;
+}
+
+.eb-col-half {
+  width: 50%;
 }

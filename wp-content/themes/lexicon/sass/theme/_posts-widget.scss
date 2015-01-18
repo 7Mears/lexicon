@@ -1,11 +1,19 @@
 .eb-post-widget {
+
+  h4 {
+    @include font-size(1.6);
+    font-family: $font__alt;
+    padding: $gutter $column;
+    text-align: center;
+  }
+
   figure {
     position: relative;
     float: left;
     overflow: hidden;
     margin: 0;
     width: 33.33333333%;
-    max-height: 360px;
+    max-height: 500px;
     background: $black;
     text-align: center;
     cursor: pointer;
@@ -41,7 +49,7 @@
     }
 
     figcaption::before {
-      background: $white;
+      background: lightgrey;
       content: '';
       opacity: 1;
     }

@@ -17,31 +17,30 @@
 
 <?php if(is_front_page() ) { ?>
 	<style>
-	.home-header--image {
-		background: url('<?php header_image() ?>');
-		background-size: cover;
-		background-repeat: no-repeat;
-		background-position: center center;
-	}
+		.home-header--image {
+			background: url('<?php header_image() ?>');
+		}
 	</style>
 <?php } ?><!-- #header image -->
+
 </head>
 
 <body <?php body_class(); ?>>
 
-<header id="masthead" class="site-header" role="banner">
-	<div class="site-branding">
-		<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-	</div><!-- .site-branding -->
+	<header id="masthead" class="site-header" role="banner">
+		<div class="site-branding">
+			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+		</div><!-- .site-branding -->
 
-	<a id="menu-trigger" href="#0"><span class="menu-icon"></span></a>
-</header><!-- #masthead -->
+		<a id="menu-trigger" href="#0"><span class="menu-icon"></span></a>
+	</header><!-- #masthead -->
 
-<div class="nav-wrap">
-	<div id="page" class="hfeed site">
-		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'lexicon' ); ?></a>
+	<div class="nav-wrap">
+		<div id="page" class="hfeed site">
+			<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'lexicon' ); ?></a>
 
-		<?php if(is_front_page() ) { ?>
-		<div class="home-header--image">
-			<?php } ?><!-- header image -->
-			<div id="content" class="site-content">
+			<?php if(is_front_page() ) { ?>
+				<div class="home-header--image">
+			<?php } else { ?>
+				<div id="content" class="site-content">
+			<?php } ?>

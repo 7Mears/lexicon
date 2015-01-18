@@ -8,7 +8,12 @@
  */
 ?>
 
+
+<?php if(is_front_page() ) { ?>
+
+<?php } else { ?>
 	</div><!-- #site-content -->
+<?php } ?>
 
 	<footer id="colophon" class="site-footer site-color-alt" role="contentinfo">
 		<div class="site-info">

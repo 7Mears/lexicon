@@ -9,7 +9,18 @@
 .site-content:before,
 .site-content:after,
 .site-footer:before,
-.site-footer:after {
+.site-footer:after,
+
+.home-top:after,
+.home-top:before,
+.home-middle:after,
+.home-middle:before,
+.home-bottom:after,
+.home-bottom:before,
+.eb-column:after,
+.eb-column:before,
+.eb-post-widget:after,
+.eb-post-widget:before {
 	@include clearfix;
 }
 

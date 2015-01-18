@@ -941,10 +941,10 @@ body,
 13.2 Posts widget
 --------------------------------------------------------------*/
 .eb-post-widget h4 {
-  font-size: 16px;
-  font-size: 1.6rem;
-  font-family: "Lato", sans-serif;
-  padding: 1.618em 4.2358em;
+  font-size: 20px;
+  font-size: 2rem;
+  text-decoration: underline;
+  padding: 1.618em 4.2358em 0 4.2358em;
   text-align: center; }
 .eb-post-widget figure {
   position: relative;
@@ -1036,6 +1036,9 @@ body,
   background-size: cover !important;
   background-repeat: no-repeat !important;
   background-position: center center !important; }
+
+.home-bottom-widget {
+  padding: 4.2358em 0; }
 
 /*--------------------------------------------------------------
 13.4 Single Page

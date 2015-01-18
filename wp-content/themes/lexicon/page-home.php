@@ -16,7 +16,6 @@ get_header(); ?>
 </section>
 <?php endif; ?>
 <!-- #home-top -->
-
 </div><!-- #header-image -->
 
 <?php if ( is_active_sidebar( 'homebottom' ) ) : ?>

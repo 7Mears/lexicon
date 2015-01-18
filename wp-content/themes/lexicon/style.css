@@ -980,7 +980,7 @@ body,
     font-size: 12px;
     font-size: 1.2rem; }
   .eb-post-widget figure figcaption::before {
-    background: lightgrey;
+    background: #EDECED;
     content: '';
     opacity: 1; }
   .eb-post-widget figure h2,

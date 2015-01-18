@@ -19,3 +19,7 @@
   padding: 0;
   margin: 0;
 }
+
+.widget-content {
+  @include span-columns(12);
+}

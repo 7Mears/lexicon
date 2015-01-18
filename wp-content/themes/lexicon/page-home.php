@@ -19,13 +19,6 @@ get_header(); ?>
 
 </div><!-- #header-image -->
 
-<?php if ( is_active_sidebar( 'homemiddle' ) ) : ?>
-<section id="home-middle" class="home-middle">
-  <?php dynamic_sidebar( 'homemiddle' ); ?>
-</section>
-<?php endif; ?>
-<!-- #home-middle -->
-
 <?php if ( is_active_sidebar( 'homebottom' ) ) : ?>
 <section id="home-bottom" class="home-bottom">
   <?php dynamic_sidebar( 'homebottom' ); ?>

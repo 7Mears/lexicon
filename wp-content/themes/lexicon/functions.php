@@ -197,17 +197,6 @@ function lexicon_widgets_init() {
 		'after_title'   => '</h2>',
 		) );
 
-	//Home Middle
-	register_sidebar( array(
-		'name'          => __( 'Home Middle', 'wordsmith' ),
-		'id'            => 'homemiddle',
-		'description'   => 'This section is displayed at the middle of the home page.',
-		'before_widget' => '<div class="home-middle-widget widget %2$s">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<h4>',
-		'after_title'   => '</h4>',
-		) );
-
 	//Home Bottom
 	register_sidebar( array(
 		'name'          => __( 'Home Bottom', 'wordsmith' ),

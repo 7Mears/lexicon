@@ -45,13 +45,47 @@ function lexicon_customizer( $wp_customize ) {
 		//Add CSS classes to customize here
 		$cssSelector = array(
 			1 => array(
-				"style" => "link_color",
-				"label" => "Link Color"
+				"style" 		=> "color_light",
+				"label" 		=> "Light",
+				"default" 	=> "#FAFAFA"
 			),
+
 			2 => array(
-				"style" => "hover_color",
-				"label" => "Hover Color"
+				"style" 		=> "color_light_alt",
+				"label" 		=> "Light alt",
+				"default" 	=> "#EEEEEE"
+			),
+
+			3 => array(
+				"style" 		=> "color_dark",
+				"label" 		=> "Dark",
+				"default" 	=> "#212121"
+			),
+
+			4 => array(
+				"style" 		=> "color_dark_alt",
+				"label" 		=> "Dark alt",
+				"default" 	=> "#424242"
+			),
+
+			5 => array(
+				"style" 		=> "color_primary",
+				"label" 		=> "Primary",
+				"default" 	=> "#00BCD4"
+			),
+
+			6 => array(
+				"style" 		=> "color_accent",
+				"label" 		=> "Accent",
+				"default" 	=> "#FFEB3B"
+			),
+
+			7 => array(
+				"style" 		=> "color_neutral",
+				"label" 		=> "Neutral",
+				"default" 	=> "#9E9E9E"
 			)
+
 		);
 
 		//Add each of the items in the array to the page
@@ -59,14 +93,14 @@ function lexicon_customizer( $wp_customize ) {
 
 			// add color picker setting for this selector
 			$wp_customize->add_setting( $selector['style'], array(
-				'default' => '#ff0000'
+				'default' => $selector['default']
 			) );
 
 			// add color picker control for this selector
 			$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, $selector['style'], array(
 				'label' => $selector['label'],
 				'section' => 'lexicon_theme_colors',
-				'settings' => $selector['style'],
+				'settings' => $selector['style']
 			) ) );
 		};
 
@@ -103,14 +137,43 @@ function lexicon_customizer( $wp_customize ) {
 
 			// Add customizer changes to head
 			function lexicon_customizer_head_styles() {
-				$link_color = get_theme_mod( 'link_color' );
 
-				if ( $link_color != '#ff0000' ) :
-				?>
+				$color_light = get_theme_mod( 'color_light' );
+				$color_light_alt = get_theme_mod( 'color_light_alt' );
+				$color_dark = get_theme_mod( 'color_dark' );
+				$color_dark_alt = get_theme_mod( 'color_dark_alt' );
+				$color_primary = get_theme_mod( 'color_primary' );
+				$color_accent = get_theme_mod( 'color_accent' );
+				$color_neutral = get_theme_mod( 'color_neutral' );
+
+
+				if ( $color_light != $selector['default'] ) : ?>
 				<style type="text/css">
-					a { color: <?php echo $link_color; ?>; }
+
+				body,
+				button,
+				input[type="button"],
+				input[type="reset"],
+				input[type="submit"],
+				.nav-wrap,
+				.menu-icon,
+				.single-content {
+					background: <?php echo $color_light; ?>;
+				}
+
+				a,
+				.main-navigation,
+				#site-navigation a.current,
+				.eb-post-widget figure:hover h2,
+				.eb-post-widget figure p,
+				.home-top,
+				.site-color-alt,
+				.main-navigation ul ul,
+				.text-bg {
+					 color: <?php echo $color_light; ?>;
+				}
+
 				</style>
-				<?php
-				endif;
-			}
+				<?php endif; }
+
 			add_action( 'wp_head', 'lexicon_customizer_head_styles' );

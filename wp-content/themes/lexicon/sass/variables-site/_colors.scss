@@ -1,16 +1,21 @@
-$white: #F2F3F8;
-$off-white: #EDECED;
-$grey: #a9aaad;
-$yellow: #dec27b;
-$black: #242927;
-$lightBlack: #2f3633;
-$teal: #70B7BA;
+$white: #FAFAFA;
+$off-white: #EEEEEE;
+$black: #212121;
+$lightBlack: #424242;
+$grey: #9E9E9E;
+
+$cyan: #00BCD4;
+$yellow: #FFEB3B;
+$amber: #FFC107;
+$teal: #009688;
+$green: #4CAF50;
+
+
 
 $color__light: $white;
 $color__light-alt: $off-white;
 $color__dark: $black;
 $color__dark-alt: $lightBlack;
-$color__primary: $yellow;
-$color__secondary: $teal;
-
+$color__primary: $cyan;
+$color__accent: $yellow;
 $color__grey: $grey;

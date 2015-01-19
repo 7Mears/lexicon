@@ -98,7 +98,7 @@ html {
   box-sizing: inherit; }
 
 body {
-  background: #F2F3F8;
+  background: #FAFAFA;
   /* Fallback for when there is no custom background color defined. */ }
 
 article,
@@ -150,7 +150,7 @@ button,
 input,
 select,
 textarea {
-  color: #242927;
+  color: #212121;
   font-family: "Merriweather", serif;
   font-size: 14px;
   line-height: 2;
@@ -198,7 +198,7 @@ address {
   margin: 0 0 1.5em; }
 
 pre {
-  background: #EDECED;
+  background: #EEEEEE;
   font-family: "Courier 10 Pitch", Courier, monospace;
   font-size: 15px;
   font-size: 1.5rem;
@@ -214,11 +214,11 @@ code, kbd, tt, var {
   font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace; }
 
 abbr, acronym {
-  border-bottom: 1px dotted #2f3633;
+  border-bottom: 1px dotted #424242;
   cursor: help; }
 
 mark, ins {
-  background: #EDECED;
+  background: #EEEEEE;
   text-decoration: none; }
 
 sup,
@@ -248,7 +248,7 @@ big {
 3.0 Elements
 --------------------------------------------------------------*/
 hr {
-  background-color: #2f3633;
+  background-color: #424242;
   border: 0;
   height: 1px;
   margin-bottom: 1.5em; }
@@ -301,14 +301,14 @@ th {
   cursor: pointer; }
 
 .button {
-  border: 1px solid #dec27b; }
+  border: 1px solid #00BCD4; }
   .button:hover {
-    border: 1px solid #70B7BA; }
+    border: 1px solid #FFEB3B; }
 
 .button-alt {
-  border: 1px solid #70B7BA; }
+  border: 1px solid #FFEB3B; }
   .button-alt:hover {
-    border: 1px solid #dec27b; }
+    border: 1px solid #00BCD4; }
 
 .more-link {
   text-decoration: underline;
@@ -348,14 +348,14 @@ input[type="submit"] {
   padding: 8px 25px;
   border-radius: 5px;
   cursor: pointer;
-  border: 1px solid #dec27b;
-  background: #F2F3F8; }
+  border: 1px solid #00BCD4;
+  background: #FAFAFA; }
 
 button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-  border: 1px solid #70B7BA; }
+  border: 1px solid #FFEB3B; }
 
 input[type="checkbox"],
 input[type="radio"] {
@@ -383,7 +383,7 @@ input[type="url"],
 input[type="password"],
 input[type="search"],
 textarea {
-  color: #2f3633;
+  color: #424242;
   border: 0; }
 
 input[type="text"]:focus,
@@ -392,7 +392,7 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 input[type="search"]:focus,
 textarea:focus {
-  color: #242927; }
+  color: #212121; }
 
 input[type="text"],
 input[type="email"],
@@ -416,18 +416,18 @@ textarea {
 5.1 Links
 --------------------------------------------------------------*/
 a {
-  color: #dec27b; }
+  color: #00BCD4; }
   a:visited {
-    color: #dec27b; }
+    color: #00BCD4; }
   a:hover, a:focus, a:active {
-    color: #70B7BA; }
+    color: #FFEB3B; }
 
 /*--------------------------------------------------------------
 5.2 Menus
 --------------------------------------------------------------*/
 .main-navigation {
   padding: 0 35px;
-  color: #F2F3F8; }
+  color: #FAFAFA; }
   .main-navigation ul {
     margin: 0; }
 
@@ -442,7 +442,7 @@ a {
   /* set a min-height and a z-index to be sure that the main element completely covers the lateral menu */
   min-height: 100%;
   width: 100%;
-  background: #F2F3F8;
+  background: #FAFAFA;
   position: relative;
   z-index: 2;
   /* Force Hardware Acceleration in WebKit */
@@ -523,7 +523,7 @@ header.is-fixed {
   transform: translateX(-50%) translateY(-50%);
   width: 20px;
   height: 2px;
-  background-color: #F2F3F8;
+  background-color: #FAFAFA;
   /* these are the upper and lower lines in the menu icon */ }
   .menu-icon::before, .menu-icon:after {
     content: '';
@@ -581,7 +581,7 @@ header.is-fixed {
   /* the secondary navigation is covered by the main element */
   z-index: 1;
   width: 260px;
-  background-color: #242927;
+  background-color: #212121;
   overflow-y: auto;
   /* Force Hardware Acceleration in WebKit */
   -webkit-transform: translateZ(0);
@@ -607,7 +607,7 @@ header.is-fixed {
     text-decoration: none; }
   #site-navigation a.current {
     background-color: #3a4a4d;
-    color: #F2F3F8; }
+    color: #FAFAFA; }
   #site-navigation ul {
     list-style: none; }
 
@@ -673,11 +673,11 @@ header.is-fixed {
   width: 1px;
   overflow: hidden; }
   .screen-reader-text:hover, .screen-reader-text:active, .screen-reader-text:focus {
-    background-color: #EDECED;
+    background-color: #EEEEEE;
     border-radius: 3px;
     box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
     clip: auto !important;
-    color: #2f3633;
+    color: #424242;
     display: block;
     font-size: 14px;
     font-size: 1.4rem;
@@ -951,7 +951,7 @@ body,
   margin: 0;
   width: 33.33333333%;
   max-height: 500px;
-  background: #242927;
+  background: #212121;
   text-align: center;
   cursor: pointer; }
   .eb-post-widget figure img {
@@ -978,7 +978,7 @@ body,
     font-size: 12px;
     font-size: 1.2rem; }
   .eb-post-widget figure figcaption::before {
-    background: #EDECED;
+    background: #EEEEEE;
     content: '';
     opacity: 1; }
   .eb-post-widget figure h2,
@@ -993,13 +993,13 @@ body,
     font-size: 2.4rem;
     left: 0;
     width: 100%;
-    color: #242927;
+    color: #212121;
     -webkit-transition: -webkit-transform 0.35s, color 0.35s;
     transition: transform 0.35s, color 0.35s;
     -webkit-transform: translate3d(0, -50%, 0);
     transform: translate3d(0, -50%, 0); }
   .eb-post-widget figure:hover h2 {
-    color: #F2F3F8; }
+    color: #FAFAFA; }
   .eb-post-widget figure figcaption::before,
   .eb-post-widget figure p {
     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
@@ -1013,7 +1013,7 @@ body,
     opacity: 0;
     -webkit-transform: translate3d(0, 10px, 0);
     transform: translate3d(0, 10px, 0);
-    color: #F2F3F8; }
+    color: #FAFAFA; }
   .eb-post-widget figure:hover figcaption::before {
     opacity: 0;
     -webkit-transform: translate3d(0, 0, 0);
@@ -1028,7 +1028,7 @@ body,
 --------------------------------------------------------------*/
 .home-top {
   padding: 16.9432em 0;
-  color: #F2F3F8; }
+  color: #FAFAFA; }
 
 .home-header--image {
   background-size: cover !important;
@@ -1070,7 +1070,7 @@ body,
     padding: 1.618em 4.2358em 1.618em 4.2358em; }
 
 .single-content {
-  background: #F2F3F8;
+  background: #FAFAFA;
   padding-top: 8.4716em;
   margin-top: -16.9432em;
   position: relative;
@@ -1114,15 +1114,15 @@ body,
 --------------------------------------------------------------*/
 .site-color-alt,
 .main-navigation ul ul {
-  background: #242927;
-  color: #F2F3F8; }
+  background: #212121;
+  color: #FAFAFA; }
 
 .text-bg {
   background: rgba(0, 0, 0, 0.4);
-  color: #F2F3F8;
+  color: #FAFAFA;
   padding: 5px 15px; }
 
 .main-navigation .search-field {
-  background: #2f3633; }
+  background: #424242; }
 
 /*# sourceMappingURL=style.css.map */

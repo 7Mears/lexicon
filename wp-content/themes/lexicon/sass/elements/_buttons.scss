@@ -13,12 +13,12 @@
   border: 1px solid $color__primary;
 
   &:hover {
-    border: 1px solid $color__secondary;
+    border: 1px solid $color__accent;
   }
 }
 
 .button-alt {
-  border: 1px solid $color__secondary;
+  border: 1px solid $color__accent;
 
   &:hover {
     border: 1px solid $color__primary;

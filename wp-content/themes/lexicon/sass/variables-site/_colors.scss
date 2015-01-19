@@ -2,39 +2,15 @@ $white: #F2F3F8;
 $off-white: #EDECED;
 $grey: #a9aaad;
 $yellow: #dec27b;
-$blue: #6987C9;
 $black: #242927;
 $lightBlack: #2f3633;
 $teal: #70B7BA;
 
-$color__background-body: $white;
-$color__background-body-alt: $black;
-$color__background-screen: #f1f1f1;
-$color__background-hr: $lightBlack;
-$color__background-button: $lightBlack;
-$color__background-pre: #eee;
-$color__background-ins: #fff9c0;
+$color__light: $white;
+$color__light-alt: $off-white;
+$color__dark: $black;
+$color__dark-alt: $lightBlack;
+$color__primary: $yellow;
+$color__secondary: $teal;
 
-$color__nav-menu-bg: $black;
-
-$color__text-screen: #21759b;
-$color__text-input: #666;
-$color__text-input-focus: #111;
-$color__link: $yellow;
-$color__link-visited: $yellow;
-$color__link-hover: $blue;
-$color__text-main: $black;
-$color__text-alt: $white;
-
-$color__border-button: #ccc #ccc #bbb;
-$color__border-button-hover: #ccc #bbb #aaa;
-$color__border-button-focus: #aaa #bbb #bbb;
-$color__border-input: #ccc;
-$color__border-abbr: #666;
-$color__border: $grey;
-$color__border-alt: $lightBlack;
-
-$color__button: $yellow;
-$color__button-alt: $yellow;
-$color__button--hover: $blue;
-$color__button-alt--hover: $blue;
+$color__grey: $grey;

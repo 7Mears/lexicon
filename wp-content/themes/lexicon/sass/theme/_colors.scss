@@ -1,15 +1,15 @@
 .site-color-alt,
 .main-navigation ul ul {
-  background: $color__background-body-alt;
-  color: $color__text-alt;
+  background: $color__dark;
+  color: $color__light;
 }
 
 .text-bg {
   background: rgba(0 ,0 ,0 ,0.4);
-  color: $color__text-alt;
+  color: $color__light;
   padding: 5px 15px;
 }
 
 .main-navigation .search-field {
-  background: $lightBlack;
+  background: $color__dark-alt;
 }

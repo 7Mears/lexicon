@@ -9,13 +9,13 @@ input[type="submit"] {
 	padding: 8px 25px;
 	border-radius: $rad;
 	cursor: pointer;
-	border: 1px solid $color__button;
-	background: $color__background-body;
+	border: 1px solid $color__primary;
+	background: $color__light;
 }
 
 button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-	border: 1px solid $color__button--hover;
+	border: 1px solid $color__secondary;
 }

@@ -2,8 +2,6 @@
 
   h4 {
     @include font-size(2);
-    text-decoration: underline;
-    padding: $gutter $column 0 $column;
     text-align: center;
   }
 
@@ -14,7 +12,7 @@
     margin: 0;
     width: 33.33333333%;
     max-height: 500px;
-    background: $black;
+    background: $color__dark;
     text-align: center;
     cursor: pointer;
 
@@ -49,7 +47,7 @@
     }
 
     figcaption::before {
-      background: $off-white;
+      background: $color__light-alt;
       content: '';
       opacity: 1;
     }
@@ -67,7 +65,7 @@
       @include font-size(2.4);
       left: 0;
       width: 100%;
-      color: $black;
+      color: $color__dark;
       -webkit-transition: -webkit-transform 0.35s, color 0.35s;
       transition: transform 0.35s, color 0.35s;
       -webkit-transform: translate3d(0,-50%,0);
@@ -75,7 +73,7 @@
     }
 
     &:hover h2 {
-      color: $white;
+      color: $color__light;
     }
 
     figcaption::before,
@@ -93,7 +91,7 @@
       opacity: 0;
       -webkit-transform: translate3d(0,10px,0);
       transform: translate3d(0,10px,0);
-      color: $white;
+      color: $color__light;
     }
 
 

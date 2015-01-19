@@ -10,18 +10,18 @@
 }
 
 .button {
-  border: 1px solid $color__button;
+  border: 1px solid $color__primary;
 
   &:hover {
-    border: 1px solid $color__button--hover;
+    border: 1px solid $color__secondary;
   }
 }
 
 .button-alt {
-  border: 1px solid $color__button-alt;
+  border: 1px solid $color__secondary;
 
   &:hover {
-    border: 1px solid $color__button-alt--hover;
+    border: 1px solid $color__primary;
   }
 }
 

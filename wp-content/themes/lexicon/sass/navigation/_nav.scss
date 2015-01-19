@@ -1,6 +1,6 @@
 .main-navigation {
   padding: 0 35px;
-  color: $white;
+  color: $color__light;
 
   ul {
     margin: 0;
@@ -18,7 +18,7 @@
   /* set a min-height and a z-index to be sure that the main element completely covers the lateral menu */
   min-height: 100%;
   width: 100%;
-  background: $color__background-body;
+  background: $color__light;
   position: relative;
   z-index: 2;
 
@@ -97,7 +97,7 @@ header.is-fixed {
   @include transform(translateX(-50%) translateY(-50%));
   width: 20px;
   height: 2px;
-  background-color: $white;
+  background-color: $color__light;
 
   /* these are the upper and lower lines in the menu icon */
   &::before,
@@ -161,7 +161,7 @@ header.is-fixed {
   /* the secondary navigation is covered by the main element */
   z-index: 1;
   width: 260px;
-  background-color: $color__nav-menu-bg;
+  background-color: $color__dark;
   overflow-y: auto;
   /* Force Hardware Acceleration in WebKit */
   -webkit-transform: translateZ(0);
@@ -188,7 +188,7 @@ header.is-fixed {
 
   a.current {
     background-color: #3a4a4d;
-    color: $white;
+    color: $color__light;
   }
 
   ul {

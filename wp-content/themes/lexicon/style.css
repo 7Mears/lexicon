@@ -198,7 +198,7 @@ address {
   margin: 0 0 1.5em; }
 
 pre {
-  background: #eee;
+  background: #EDECED;
   font-family: "Courier 10 Pitch", Courier, monospace;
   font-size: 15px;
   font-size: 1.5rem;
@@ -214,11 +214,11 @@ code, kbd, tt, var {
   font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace; }
 
 abbr, acronym {
-  border-bottom: 1px dotted #666;
+  border-bottom: 1px dotted #2f3633;
   cursor: help; }
 
 mark, ins {
-  background: #fff9c0;
+  background: #EDECED;
   text-decoration: none; }
 
 sup,
@@ -303,12 +303,12 @@ th {
 .button {
   border: 1px solid #dec27b; }
   .button:hover {
-    border: 1px solid #6987C9; }
+    border: 1px solid #70B7BA; }
 
 .button-alt {
-  border: 1px solid #dec27b; }
+  border: 1px solid #70B7BA; }
   .button-alt:hover {
-    border: 1px solid #6987C9; }
+    border: 1px solid #dec27b; }
 
 .more-link {
   text-decoration: underline;
@@ -355,7 +355,7 @@ button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-  border: 1px solid #6987C9; }
+  border: 1px solid #70B7BA; }
 
 input[type="checkbox"],
 input[type="radio"] {
@@ -383,7 +383,7 @@ input[type="url"],
 input[type="password"],
 input[type="search"],
 textarea {
-  color: #666;
+  color: #2f3633;
   border: 0; }
 
 input[type="text"]:focus,
@@ -392,7 +392,7 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 input[type="search"]:focus,
 textarea:focus {
-  color: #111; }
+  color: #242927; }
 
 input[type="text"],
 input[type="email"],
@@ -420,7 +420,7 @@ a {
   a:visited {
     color: #dec27b; }
   a:hover, a:focus, a:active {
-    color: #6987C9; }
+    color: #70B7BA; }
 
 /*--------------------------------------------------------------
 5.2 Menus
@@ -673,11 +673,11 @@ header.is-fixed {
   width: 1px;
   overflow: hidden; }
   .screen-reader-text:hover, .screen-reader-text:active, .screen-reader-text:focus {
-    background-color: #f1f1f1;
+    background-color: #EDECED;
     border-radius: 3px;
     box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
     clip: auto !important;
-    color: #21759b;
+    color: #2f3633;
     display: block;
     font-size: 14px;
     font-size: 1.4rem;
@@ -943,8 +943,6 @@ body,
 .eb-post-widget h4 {
   font-size: 20px;
   font-size: 2rem;
-  text-decoration: underline;
-  padding: 1.618em 4.2358em 0 4.2358em;
   text-align: center; }
 .eb-post-widget figure {
   position: relative;
@@ -1037,8 +1035,9 @@ body,
   background-repeat: no-repeat !important;
   background-position: center center !important; }
 
-.home-bottom-widget {
-  padding: 4.2358em 0; }
+.home-bottom h4,
+.home-bottom h5 {
+  padding-bottom: 1.618em; }
 
 /*--------------------------------------------------------------
 13.4 Single Page

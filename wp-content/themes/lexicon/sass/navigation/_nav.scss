@@ -21,6 +21,7 @@
   background: $color__light;
   position: relative;
   z-index: 2;
+  box-shadow: 0 0 20px rgb(0,0,0);
 
   /* Force Hardware Acceleration in WebKit */
   -webkit-transform: translateZ(0);

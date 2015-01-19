@@ -445,6 +445,7 @@ a {
   background: #FAFAFA;
   position: relative;
   z-index: 2;
+  box-shadow: 0 0 20px black;
   /* Force Hardware Acceleration in WebKit */
   -webkit-transform: translateZ(0);
   -webkit-backface-visibility: hidden;

@@ -34,7 +34,10 @@
 			<?php dynamic_sidebar( 'navigation' ); ?>
 		</div><!-- #footer-widget -->
 	<?php endif; ?>
-
+	<?php
+	// Fix menu overlap bug..
+	if ( is_admin_bar_showing() ) echo '<div style="min-height: 28px;"></div>';
+	?>
 </nav><!-- #site-navigation -->
 
 <?php wp_footer(); ?>

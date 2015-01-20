@@ -950,8 +950,9 @@ body,
   float: left;
   overflow: hidden;
   margin: 0;
-  width: 33.33333333%;
-  max-height: 500px;
+  width: 33.3333%;
+  width: calc(100% / 3);
+  max-height: 360px;
   background: #212121;
   text-align: center;
   cursor: pointer; }

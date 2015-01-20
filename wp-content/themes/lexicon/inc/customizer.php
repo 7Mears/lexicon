@@ -135,45 +135,47 @@ function lexicon_customizer( $wp_customize ) {
 			}
 			add_action( 'customize_register', 'lexicon_customizer' );
 
-			// Add customizer changes to head
-			function lexicon_customizer_head_styles() {
+// Add customizer changes to head
+function lexicon_customizer_head_styles() {
 
-				$color_light = get_theme_mod( 'color_light' );
-				$color_light_alt = get_theme_mod( 'color_light_alt' );
-				$color_dark = get_theme_mod( 'color_dark' );
-				$color_dark_alt = get_theme_mod( 'color_dark_alt' );
-				$color_primary = get_theme_mod( 'color_primary' );
-				$color_accent = get_theme_mod( 'color_accent' );
-				$color_neutral = get_theme_mod( 'color_neutral' );
+	$color_light = get_theme_mod( 'color_light' );
+	$color_light_alt = get_theme_mod( 'color_light_alt' );
+	$color_dark = get_theme_mod( 'color_dark' );
+	$color_dark_alt = get_theme_mod( 'color_dark_alt' );
+	$color_primary = get_theme_mod( 'color_primary' );
+	$color_accent = get_theme_mod( 'color_accent' );
+	$color_neutral = get_theme_mod( 'color_neutral' );
+
+// Light color
+//
+	if ( $color_light != $selector['default'] ) : ?>
+		<style type="text/css">
+
+			body,
+			button,
+			input[type="button"],
+			input[type="reset"],
+			input[type="submit"],
+			.nav-wrap,
+			.menu-icon,
+			.single-content {
+				background: <?php echo $color_light; ?>;
+			}
+
+			a,
+			.main-navigation,
+			#site-navigation a.current,
+			.eb-post-widget figure:hover h2,
+			.eb-post-widget figure p,
+			.home-top,
+			.site-color-alt,
+			.main-navigation ul ul,
+			.text-bg {
+				 color: <?php echo $color_light; ?>;
+			}
+
+		</style>
+	<?php endif; }
 
 
-				if ( $color_light != $selector['default'] ) : ?>
-				<style type="text/css">
-
-					body,
-					button,
-					input[type="button"],
-					input[type="reset"],
-					input[type="submit"],
-					.nav-wrap,
-					.menu-icon,
-					.single-content {
-						background: <?php echo $color_light; ?>;
-					}
-
-					a,
-					.main-navigation,
-					#site-navigation a.current,
-					.eb-post-widget figure:hover h2,
-					.eb-post-widget figure p,
-					.home-top,
-					.site-color-alt,
-					.main-navigation ul ul,
-					.text-bg {
-						 color: <?php echo $color_light; ?>;
-					}
-
-				</style>
-				<?php endif; }
-
-			add_action( 'wp_head', 'lexicon_customizer_head_styles' );
+add_action( 'wp_head', 'lexicon_customizer_head_styles' );

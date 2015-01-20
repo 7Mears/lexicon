@@ -150,28 +150,28 @@ function lexicon_customizer( $wp_customize ) {
 				if ( $color_light != $selector['default'] ) : ?>
 				<style type="text/css">
 
-				body,
-				button,
-				input[type="button"],
-				input[type="reset"],
-				input[type="submit"],
-				.nav-wrap,
-				.menu-icon,
-				.single-content {
-					background: <?php echo $color_light; ?>;
-				}
+					body,
+					button,
+					input[type="button"],
+					input[type="reset"],
+					input[type="submit"],
+					.nav-wrap,
+					.menu-icon,
+					.single-content {
+						background: <?php echo $color_light; ?>;
+					}
 
-				a,
-				.main-navigation,
-				#site-navigation a.current,
-				.eb-post-widget figure:hover h2,
-				.eb-post-widget figure p,
-				.home-top,
-				.site-color-alt,
-				.main-navigation ul ul,
-				.text-bg {
-					 color: <?php echo $color_light; ?>;
-				}
+					a,
+					.main-navigation,
+					#site-navigation a.current,
+					.eb-post-widget figure:hover h2,
+					.eb-post-widget figure p,
+					.home-top,
+					.site-color-alt,
+					.main-navigation ul ul,
+					.text-bg {
+						 color: <?php echo $color_light; ?>;
+					}
 
 				</style>
 				<?php endif; }

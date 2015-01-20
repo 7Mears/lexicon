@@ -44,43 +44,43 @@ function lexicon_customizer( $wp_customize ) {
 
 		//Add CSS classes to customize here
 		$cssSelector = array(
-			1 => array(
+			array(
 				"style" 		=> "color_light",
 				"label" 		=> "Light",
 				"default" 	=> "#FAFAFA"
 			),
 
-			2 => array(
+			array(
 				"style" 		=> "color_light_alt",
 				"label" 		=> "Light alt",
 				"default" 	=> "#EEEEEE"
 			),
 
-			3 => array(
+			array(
 				"style" 		=> "color_dark",
 				"label" 		=> "Dark",
 				"default" 	=> "#212121"
 			),
 
-			4 => array(
+			array(
 				"style" 		=> "color_dark_alt",
 				"label" 		=> "Dark alt",
 				"default" 	=> "#424242"
 			),
 
-			5 => array(
+			array(
 				"style" 		=> "color_primary",
 				"label" 		=> "Primary",
 				"default" 	=> "#00BCD4"
 			),
 
-			6 => array(
+			array(
 				"style" 		=> "color_accent",
 				"label" 		=> "Accent",
 				"default" 	=> "#FFEB3B"
 			),
 
-			7 => array(
+			array(
 				"style" 		=> "color_neutral",
 				"label" 		=> "Neutral",
 				"default" 	=> "#9E9E9E"

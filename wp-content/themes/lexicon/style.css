@@ -152,7 +152,7 @@ select,
 textarea {
   color: #212121;
   font-family: "Merriweather", serif;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 2;
   font-weight: 300; }
 
@@ -192,7 +192,11 @@ dfn, cite, em, i {
   font-style: italic; }
 
 blockquote {
-  margin: 0 1.5em; }
+  margin: 0 1.5em;
+  font-style: italic;
+  color: #424242;
+  font-size: 22px;
+  font-size: 2.2rem; }
 
 address {
   margin: 0 0 1.5em; }
@@ -1044,61 +1048,48 @@ body,
 /*--------------------------------------------------------------
 13.4 Single Page
 --------------------------------------------------------------*/
-.single-content {
+.content-area {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 100%; }
-  .single-content:last-child {
-    margin-right: 0; }
-  .single-content .site-main {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 57.35098%;
-    margin-left: 21.32451%; }
-    .single-content .site-main:last-child {
-      margin-right: 0; }
-  .single-content .entry-title,
-  .single-content .entry-meta {
-    text-align: center; }
-  .single-content .alignleft {
-    margin-left: -37.18995%;
-    float: left;
-    padding: 1.618em 4.2358em 1.618em 4.2358em; }
-  .single-content .alignright {
-    margin-right: -37.18995%;
-    float: right;
-    padding: 1.618em 4.2358em 1.618em 4.2358em; }
-
-.single-content {
+  width: 82.94039%;
+  margin-left: 8.5298%;
+  margin-top: -8.4716em;
+  z-index: 1;
   background: #FAFAFA;
-  padding-top: 8.4716em;
-  margin-top: -16.9432em;
   position: relative;
   border-radius: 5px 5px 0 0; }
+  .content-area:last-child {
+    margin-right: 0; }
 
-.single-post-header-wrap {
-  position: relative;
-  height: 100%;
-  width: 100%; }
-
-.single-post-header {
-  background-size: cover !important;
+.the-post-info {
+  text-align: center;
+  padding: 4.2358em 0 1.618em 0;
   width: 100%;
-  height: 100%;
-  padding: 8.4716em 0 25.41481em 0; }
-  .single-post-header h2,
-  .single-post-header p {
-    text-align: center;
-    display: block; }
+  background: #212121;
+  color: #FAFAFA; }
 
-.single-post-header-alt {
-  padding: 8.4716em 0 25.41481em 0; }
-  .single-post-header-alt h2,
-  .single-post-header-alt p {
-    text-align: center;
-    display: block; }
+.the-content {
+  padding-top: 4.2358em;
+  float: left;
+  display: block;
+  margin-right: 2.84259%;
+  width: 79.43148%;
+  margin-left: 10.28426%; }
+  .the-content:last-child {
+    margin-right: 0; }
+  .the-content::first-letter {
+    font-size: 90px;
+    float: left;
+    margin-right: 10px;
+    line-height: 110px; }
+  .the-content::first-line {
+    font-size: 24px;
+    font-size: 2.4rem; }
+
+.the-post-image {
+  min-width: 100%;
+  height: auto; }
 
 /*--------------------------------------------------------------
 13.5 Footer

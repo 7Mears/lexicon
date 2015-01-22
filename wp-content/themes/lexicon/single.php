@@ -8,56 +8,39 @@
 get_header(); ?>
 	</div><!-- #site-content -->
 </div><!-- #site -->
-<!-- Start the loop -->
-<?php while ( have_posts() ) : the_post(); ?>
 
-<!-- Grab the featured image and set it as a class -->
-<?php if (has_post_thumbnail( $post->ID ) ): ?>
-	<?php
-		$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
-		$image = $image[0];
-	?>
+<?php while ( have_posts() ) : the_post(); ?><!-- Start the loop -->
 
-<div class="single-post-header-wrap">
-	<div class ="single-post-header site-color-alt" style="background-image: url('<?php echo $image; ?>')">
-		<h2><span class="text-bg"><?php the_title(); ?></span></h2>
-		<p><span class="text-bg">By <?php the_author() ?>, on <?php the_time('F jS, Y') ?> </span></p>
+	<div class="the-post-info">
+		<h2><?php the_title(); ?></h2>
+		<p>by <?php the_author() ?></p>
 	</div>
-</div>
 
-<?php else : ?>
 
-<div class ="single-post-header-alt site-color-alt">
-	<h2><?php the_title(); ?></h2>
-	<p>By <?php the_author() ?>, on <?php the_time('F jS, Y') ?> </p>
-</div>
-
-<?php endif; ?>
+<?php
+	if (has_post_thumbnail( $post->ID ) ):
+		echo get_the_post_thumbnail( $post_id, 'full', array( 'class' => 'the-post-image' ) );
+	endif;
+?>
 
 <div class="site">
-	<div class="site-content">
+	<div <?php post_class('site-content'); ?>>
+		<div id="primary" class="content-area single-content">
 
-		<div <?php post_class() ?> id="post-<?php the_ID(); ?>">
-			<div id="primary" class="content-area single-content">
-				<main id="main" class="site-main" role="main">
-					<?php the_content(); ?>
-				</div>
-			</div>
+				<div class="the-content">
+						<?php the_content(); ?>
+						<?php the_time('F jS, Y') ?>
 
-			<div class="site-content">
-
-				<?php
-				// If comments are open or we have at least one comment, load up the comment template
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
-				?>
-
-				<?php lexicon_post_nav(); ?>
-
-				<?php endwhile; // end of the loop. ?>
-				</main><!-- #main -->
-			</div><!-- #primary -->
-
+					<?php
+					// If comments are open or we have at least one comment, load up the comment template
+					if ( comments_open() || get_comments_number() ) :
+						comments_template();
+					endif;
+					?>
+					<?php endwhile; // end of the loop. ?>
+					<?php lexicon_post_nav(); ?>
+				</div><!-- #the-content -->
+		</div><!-- #primary -->
+	</div><!-- #site-content -->
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
